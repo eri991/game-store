@@ -57,6 +57,18 @@ class CI_Controller {
 	 *
 	 * @var	object
 	 */
+
+	public $benchmark;
+    public $hooks;
+    public $config;
+    public $log;
+    public $utf8;
+    public $uri;
+    public $router;
+    public $output;
+    public $security;
+    public $input;
+    public $lang;
 	private static $instance;
 
 	/**

@@ -56,7 +56,18 @@ class CI_Router {
 	 *
 	 * @var	object
 	 */
-	public $config;
+	public $uri;
+	public $benchmark;
+    public $hooks;
+    public $config;
+    public $log;
+    public $utf8;
+    public $router;
+    public $output;
+    public $security;
+    public $input;
+    public $lang;
+    public $load;
 
 	/**
 	 * List of routes
