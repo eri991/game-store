@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>403 Forbidden</title>
+	<title>G-Max</title>
 </head>
 <body>
 
