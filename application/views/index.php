@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<a href="ablabla.html">anodwinaod</a>
+<a href="tela2.php">anodwinaod</a>
 
 </body>
 </html>
