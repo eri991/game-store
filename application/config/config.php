@@ -23,7 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/G-Max/';
+$nome_pasta = basename(dirname(dirname(__DIR__)));
+$config['base_url'] = 'http://localhost/' . $nome_pasta . '/';
 
 /*
 |--------------------------------------------------------------------------
