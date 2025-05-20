@@ -1,5 +1,62 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
 #mainHeader{
+    background-color: black;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+#mainNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 87%;
+}
+#logoHeader{
+    width: 70px;
+}
+#mainNav > div{
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#mainNav > div > p{
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#mainNav > a{
+    color: blueviolet;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+#mainNav > a::after{
+    color: blueviolet;
+    text-decoration: none;
+}
+#mainNav > a:hover{
+    color: white;
+    transition: all 200ms;
+}
+#wrapper {
+    display: flex;
+}
+#sideLogin{
+    width: 50%;
+    height: 646px;
+    background-color: black;
+}
+#sideSpaceBackground{
+    width: 50%;
+    height: 646px;
     background-color: red;
-    width: 100px;
-    height: 100px;
 }
