@@ -3,6 +3,10 @@
     margin: 0px;
     border: 0px;
 }
+
+body {
+    background-color: black;
+}
 #mainHeader{
     background-color: black;
     height: 80px;
@@ -52,13 +56,12 @@
 }
 #sideLogin{
     width: 50%;
-    height: 646px;
-    background-color: black;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#sideLogin > div{
+#wrapper > #sideLogin > div{
     width: 60%;
     height: 75%;
     padding: 20px;
@@ -100,6 +103,9 @@
     border-radius: 5px;
     display: none
 }
+
+
+
 .inputContainer > input :focus{
     border: blueviolet;
 }
@@ -113,7 +119,17 @@
     transform: translateY(-50%);
 }
 #sideSpaceBackground{
+    display: flex;
+    justify-content: center;
+    align-items: end;
     width: 50%;
-    height: 646px;
-    background-color: red;
+    height: 600px;
+    background-image: url('/assets/fundo\ estelar 2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#sideSpaceBackground > img {
+    width: 100%;
+    height: 500px;
 }
