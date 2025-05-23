@@ -17,31 +17,9 @@
 				<p>Cadastrar</p>
 			</div>
 			<a href="https://help.steampowered.com/pt/" target="_blank">Precisa de ajuda?</a>
+            <a href="<?= base_url('carrinho') ?>">Carrinho</a>
 		</nav>
 	</header>
-	<main id="wrapper">
-		<section id="sideLogin">
-			<div>
-				<h2>Cadastrar</h2>
-				<!--Nome Completo
-				data de nascimento
-				país
-				nickname
-				email
-				senha
-				confirmar senha
-				-->
-				<div class="inputContainer">
-					<label for="nomeInput">
-						Nome Completo
-					</label>
-					<input type="text" name="nomeCompleto" id="nomeInput" placeholder="Nome Completo">
-				</div>
-			</div>
-		</section>
-		<section id="sideSpaceBackground">
-			<img src="/game-store/assets/img jinx.png" alt="img jinx">
-		</section>
-	</main>
+    
 </body>
 </html>
