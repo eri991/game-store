@@ -2,18 +2,15 @@
 <html>
 <head>
 	<title>G-Max</title>
-	<!-- <link rel="icon" href="<?php echo base_url('assets/icon_Gmax.ico'); ?>" type="image/x-icon"> -->
-	<link rel="shortcut icon" href="/assets/icon_Gmax.ico" type="image/x-icon">
-	<link rel="stylesheet" href="/assets/loginPage.css">
-	<!-- <link rel="stylesheet" href="<? php echo base_url('assets/loginPage.css') ?>"> -->
+	<link rel="icon" href="<?php echo base_url('assets/icon_Gmax.ico'); ?>" type="image/x-icon">
+	<link rel="stylesheet" href="<?php echo base_url('assets/loginPage.css') ?>">
 </head>
 <body>
 
 	<header id='mainHeader'>
 		<nav id= 'mainNav'>
 			<div>
-				<img id= 'logoHeader' src="/assets/icon_Gmax.ico" alt="Logo">
-				<!-- <img id= 'logoHeader' src="<?php echo base_url('assets/icon_Gmax.jpg')?>" alt="Logo"> -->
+				<img id= 'logoHeader' src="<?php echo base_url('assets/icon_Gmax.jpg')?>" alt="Logo">
 				<p>Cadastrar</p>
 			</div>
 			<a href="" target="_blank">Precisa de ajuda?</a>
@@ -51,8 +48,8 @@
 				</div>
 			</form>
 		</section>
-		<section id="sideSpaceBackground">
-			<img src="/assets/jinx.png" alt="img jinx">
+		<section id="sideSpaceBackground" style="background-image: url(<?php echo base_url("assets/fundo_estelar.jpg")?>);">
+			<img src='<?php echo base_url('assets/jinx.png') ?>' alt="Jinx">
 		</section>
 	</main>
 </body>
