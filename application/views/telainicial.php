@@ -3,21 +3,20 @@
 <head>
 	<title>G-Max</title>
 	<!-- <link rel="icon" href="<?php echo base_url('assets/icon_Gmax.ico'); ?>" type="image/x-icon"> -->
-	<link rel="shortcut icon" href="/assets/icon_Gmax.ico" type="image/x-icon">
-	<link rel="stylesheet" href="/assets/telainicial.css">
-	<!-- <link rel="stylesheet" href="<? php echo base_url('assets/loginPage.css') ?>"> -->
+	<link rel="shortcut icon" href="<?php echo base_url('assets/icon_Gmax.ico'); ?>" type="image/x-icon">
+	<link rel="stylesheet" href="<?php echo base_url('assets/telainicial.css') ?>">
 </head>
 <body>
 
 	<header id='mainHeader'>
 		<nav id= 'mainNav'>
 			<div id="logoman">
-				<img id= 'logoHeader' src="/assets/icon_Gmax.ico" alt="Logo">
+				<img id= 'logoHeader' src="<?php echo base_url('assets/icon_Gmax.ico') ?>" alt="Logo">
                 <div id="nomes">
                     <h1>G-MAX</h1>
                     <h2>UNIVERSE</h2>
                 </div>
-				<!-- <img id= 'logoHeader' src="<?php echo base_url('assets/icon_Gmax.jpg')?>" alt="Logo"> -->
+				<img id= 'logoHeader' src="<?php echo base_url('assets/icon_Gmax.ico')?>" alt="Logo">
 			    </div>
             <div id="divLista">
                 <ul class="listaNav">

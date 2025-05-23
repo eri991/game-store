@@ -5,7 +5,6 @@
 	<!-- <link rel="icon" href="<?php echo base_url('assets/icon_Gmax.ico'); ?>" type="image/x-icon"> -->
 	<link rel="shortcut icon" href="/game-store/assets/icon_Gmax.ico" type="image/x-icon">
 	<link rel="stylesheet" href="/game-store/assets/loginPage.css">
-	<!-- <link rel="stylesheet" href="<? php echo base_url('assets/loginPage.css') ?>"> -->
 </head>
 <body>
 

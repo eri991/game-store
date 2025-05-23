@@ -1,134 +1,171 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: black;
+  background-color: black;
 }
-#mainHeader{
-    background-color: black;
-    height: 80px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+
+#mainHeader {
+  background-color: black;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
-#mainNav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 87%;
+
+#mainNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
 }
-#logoHeader{
-    width: 70px;
+
+#logoHeader {
+  width: 70px;
 }
-#mainNav > div{
-    width: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+#mainNav > div {
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-#mainNav > div > p{
-    color: blueviolet;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+#mainNav > div > p {
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#mainNav > a{
-    color: blueviolet;
-    font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-decoration: none;
+
+#mainNav > a {
+  color: blueviolet;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
 }
-#mainNav > a::after{
-    color: blueviolet;
-    text-decoration: none;
+
+#mainNav > a::after {
+  color: blueviolet;
+  text-decoration: none;
 }
-#mainNav > a:hover{
-    color: white;
-    transition: all 200ms;
+
+#mainNav > a:hover {
+  color: white;
+  transition: all 200ms;
 }
+
 #wrapper {
-    display: flex;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  flex-wrap: wrap;
 }
-#sideLogin{
-    width: 50%;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+#sideLogin,
+#sideSpaceBackground {
+  width: 50%;
+  min-width: 500px;
+  height: auto;
 }
-#wrapper > #sideLogin > div{
-    width: 60%;
-    height: 75%;
-    padding: 20px;
-    background-color: blue;
-    color: blueviolet;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+#sideLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#cadForm > h2{
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: blueviolet;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+#wrapper > #sideLogin > div {
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+  height: auto;
+  padding: 2rem;
+  background-color: blue;
+  color: blueviolet;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.inputContainer{
-    width: 300px;
-    height: 50px;
-    padding: 10px;
-    display: flex;
-    justify-content: start;
-    position: relative;
+
+#cadForm > h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: blueviolet;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.inputContainer label{
-    position: absolute;
-    top: 16px;
-    left: 20px;
-    background-color: black;
-    color: grey;
-    transition: 200ms all ease-in-out;
-    pointer-events: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+.inputContainer {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+  position: relative;
 }
-.inputsCad{
-    width: 100%;
-    height: 20px;
-    border-radius: 5px;
-    border: 2px solid grey;
-    padding: 5px;
-    font-size: 16px;
-    outline: none;
-    background-color: black;
-    color: white;
+
+.inputContainer label {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  background-color: black;
+  color: grey;
+  transition: 200ms all ease-in-out;
+  pointer-events: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.inputsCad {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  padding: 8px;
+  font-size: 1rem;
+  outline: none;
+  background-color: black;
+  color: white;
+}
+
 .inputsCad:focus + label,
 .inputsCad:not(:placeholder-shown) + label {
-    top: 1px;
-    left: 20px;
-    padding-left: 2px;
-    padding-right: 2px;
-    font-size: 12px;
-    color: blueviolet;
+  top: 2px;
+  left: 15px;
+  font-size: 12px;
+  color: blueviolet;
+  background-color: black;
+  padding: 0 5px;
 }
-#dataNasc{
-    color: grey;
+
+#dataNasc {
+  color: grey;
+  transition: 200ms all;
 }
-#sideSpaceBackground{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 845px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% auto;
+
+#dataNasc:focus {
+  color: white;
+}
+
+#sideSpaceBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
 }
 
 #sideSpaceBackground > img {
-    filter: drop-shadow( -5px 5px 5px blueviolet);
-    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 40%);
-    mask-image: linear-gradient(to top, transparent 0%, black 40%);
+    height: 30rem;
+  filter: drop-shadow(-5px 5px 5px blueviolet);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 40%);
+  mask-image: linear-gradient(to top, transparent 0%, black 40%);
 }
