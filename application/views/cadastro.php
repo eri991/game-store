@@ -17,6 +17,7 @@
 				<p>Cadastrar</p>
 			</div>
 			<a href="https://help.steampowered.com/pt/" target="_blank">Precisa de ajuda?</a>
+			<a href="<?= base_url('carrinho') ?>">Carrinho</a>
 		</nav>
 	</header>
 	<main id="wrapper">

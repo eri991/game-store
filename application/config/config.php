@@ -36,7 +36,7 @@ $config['base_url'] = 'http://localhost/' . $nome_pasta . '/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.html';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
