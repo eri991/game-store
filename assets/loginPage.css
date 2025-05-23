@@ -97,9 +97,10 @@ body {
     border-radius: 5px;
     border: 2px solid grey;
     padding: 5px;
-    font-size: 20px;
+    font-size: 16px;
     outline: none;
     background-color: black;
+    color: blueviolet;
 }
 .inputsCad:focus + label,
 .inputsCad:not(:placeholder-shown) + label {
