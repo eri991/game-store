@@ -3,8 +3,8 @@
 <head>
 	<title>G-Max</title>
 	<!-- <link rel="icon" href="<?php echo base_url('assets/icon_Gmax.ico'); ?>" type="image/x-icon"> -->
-	<link rel="shortcut icon" href="/game-store/assets/icon_Gmax.ico" type="image/x-icon">
-	<link rel="stylesheet" href="/game-store/assets/loginPage.css">
+	<link rel="shortcut icon" href="/assets/icon_Gmax.ico" type="image/x-icon">
+	<link rel="stylesheet" href="/assets/loginPage.css">
 	<!-- <link rel="stylesheet" href="<? php echo base_url('assets/loginPage.css') ?>"> -->
 </head>
 <body>
@@ -12,7 +12,7 @@
 	<header id='mainHeader'>
 		<nav id= 'mainNav'>
 			<div>
-				<img id= 'logoHeader' src="/game-store/assets/icon_Gmax.ico" alt="Logo">
+				<img id= 'logoHeader' src="/assets/icon_Gmax.ico" alt="Logo">
 				<!-- <img id= 'logoHeader' src="<?php echo base_url('assets/icon_Gmax.jpg')?>" alt="Logo"> -->
 				<p>Cadastrar</p>
 			</div>
@@ -22,7 +22,7 @@
 	</header>
 	<main id="wrapper">
 		<section id="sideLogin">
-			<div>
+			<form action="" id="cadForm">
 				<h2>Cadastrar</h2>
 				<!--Nome Completo
 				data de nascimento
@@ -33,15 +33,15 @@
 				confirmar senha
 				-->
 				<div class="inputContainer">
-					<label for="nomeInput">
+					<input type="text" name="nomeCompleto" id="nomeCompleto" class="inputsCad" placeholder=" ">
+					<label for="nomeCompleto">
 						Nome Completo
 					</label>
-					<input type="text" name="nomeCompleto" id="nomeInput" placeholder="Nome Completo">
 				</div>
-			</div>
+			</form>
 		</section>
 		<section id="sideSpaceBackground">
-			<img src="/game-store/assets/img jinx.png" alt="img jinx">
+			<img src="/assets/jinx.png" alt="img jinx">
 		</section>
 	</main>
 </body>
