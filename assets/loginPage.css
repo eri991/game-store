@@ -115,12 +115,14 @@ body {
 }
 #sideSpaceBackground{
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: end;
     width: 50%;
-    height: 676px;
-    background-image: url('/game-store/assets/fundo\ estelar\ 2.jpg');
-    background-size: cover;
+    height: 845px;
+    background-image: url('/assets/fundo_estelar.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
 }
 
 #sideSpaceBackground > img {
