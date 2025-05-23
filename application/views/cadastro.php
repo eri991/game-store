@@ -20,8 +20,8 @@
 		<section id="sideLogin">
 			<form action="" id="cadForm">
 				<h2>Cadastrar</h2>
-				<!--Nome Completo
-				data de nascimento
+				<!--Nome Completox
+				data de nascimentox
 				país
 				nickname
 				email
@@ -35,15 +35,21 @@
 					</label>
 				</div>
 				<div class="inputContainer">
-					<input type="text" name="username" id="nomeCompleto" class="inputsCad" placeholder=" ">
-					<label for="username">
-						Username
+					<input type="text" name="nickname" id="nickname" class="inputsCad" placeholder=" ">
+					<label for="nickname">
+						Nickname
 					</label>
 				</div>
 				<div class="inputContainer">
-					<input type="text" name="email" id="nomeCompleto" class="inputsCad" placeholder=" ">
+					<input type="email" name="email" id="email" class="inputsCad" placeholder=" ">
 					<label for="email">
 						Email
+					</label>
+				</div>
+				<div class="inputContainer">
+					<input type="date" name="dataNasc" id="dataNasc" class="inputsCad" placeholder=" ">
+					<label for="dataNasc">
+						Data de Nascimento
 					</label>
 				</div>
 			</form>
