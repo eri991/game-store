@@ -1,0 +1,90 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+#mainHeader{
+    background-color: gray;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#mainNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#mainNav > #logoman {
+    display: flex;
+    margin: 100px;
+}
+
+#mainNav > #nomes {
+    display: flex;
+}
+
+#mainNav > #logoman > #nomes > h1 {
+    font-size: 30px;
+    text-align: center;
+    color: rgb(132, 0, 255);
+    filter: drop-shadow(1px 1px 2px #8C52FF);
+}
+
+
+#mainNav > #logoman > #nomes > h2 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+#logoHeader{
+    width: 70px;
+}
+
+#divLista {
+    display: flex;
+    margin-right: 50px;
+}
+
+.listaNav {
+    display: flex;
+    list-style: none;
+}
+
+.listaNav > li {
+    margin: 30px;
+    display: inline-block;
+    position: relative;
+}
+
+.listaNav > li > .input-container{
+    width: 100%;
+}
+
+.listaNav > li > .input-container >  input {
+    height: 25px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.listaNav > li > .input-container > img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    transform: translateY(-50%);
+    right: 0px; 
+    top: 50%;
+    border-radius: 20px;
+    background-color: black;
+}
