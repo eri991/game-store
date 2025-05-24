@@ -57,6 +57,7 @@ class CI_Loader {
 	 *
 	 * @var	int
 	 */
+	public $form_validation;
 	public $benchmark;
     public $hooks;
     public $config;

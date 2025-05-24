@@ -3,16 +3,15 @@
 
 <head>
 	<title>G-Max</title>
-	<link rel="icon" href="<?php echo base_url('assets/icon_Gmax.ico'); ?>" type="image/x-icon">
-	<link rel="stylesheet" href="<?php echo base_url('assets/loginPage.css') ?>">
+	<link rel="icon" href="<?php echo base_url('assets/img/icon_Gmax.ico'); ?>" type="image/x-icon">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/loginPage.css') ?>">
 </head>
-
+<script src="<?php echo base_url('controllers/Cadastro.php')?>"></script>
 <body>
-
 	<header id='mainHeader'>
 		<nav id='mainNav'>
 			<div>
-				<img id='logoHeader' src="<?php echo base_url('assets/icon_Gmax.ico') ?>" alt="Logo">
+				<img id='logoHeader' src="<?php echo base_url('assets/img/icon_Gmax.ico') ?>" alt="Logo">
 				<p>Cadastrar</p>
 			</div>
 			<a href="" target="_blank">Precisa de ajuda?</a>
@@ -20,21 +19,12 @@
 	</header>
 	<main id="wrapper">
 		<section id="sideLogin">
-			<form action="" id="cadForm" autocomplete="off">
+			<form action="" id="cadForm" autocomplete="off" method="post" onsubmit="return formValidation()">
 				<h2>Cadastrar</h2>
-				<!--Nome Completox
-				data de nascimentox
-				paísx
-				nicknamex
-				emailx
-				senha
-				confirmar senha
-				-->
-				<div class="inputContainer">
-					<input type="text" name="nomeCompleto" id="nomeCompleto" class="inputsCad" placeholder=" ">
-					<label for="nomeCompleto">
-						Nome Completo
-					</label>
+				<div class="inputContainer <?= form_error('nomeCompleto') ? 'input-error':'' ?>" >
+					<input type="text" name="nomeCompleto" id="nomeCompleto" class="inputsCad" placeholder=" " value="<?= set_value('nomeCompleto') ?>">
+					<label for="nomeCompleto">Nome Completo</label>
+					<?= form_error('nomeCompleto','<div class="erroMsg">','</div>');?>
 				</div>
 				<div class="inputContainer">
 					<input type="text" name="nickname" id="nickname" class="inputsCad" placeholder=" ">
@@ -270,11 +260,14 @@
 						Confirmar Senha
 					</label>
 				</div>
+				<div class="inputContainer">
+					<input type="submit" value="Cadastrar" class="inputsCad"id="submit">
+				</div>
 			</form>
 		</section>
 		<section id="sideSpaceBackground"
-			style="background-image: url(<?php echo base_url("assets/fundo_estelar.jpg") ?>);">
-			<img src='<?php echo base_url('assets/jinx.png') ?>' alt="Jinx">
+			style="background-image: url(<?php echo base_url("assets/img/fundo_estelar.jpg") ?>);">
+			<img src='<?php echo base_url('assets/img/jinx.png') ?>' alt="Jinx">
 		</section>
 	</main>
 </body>

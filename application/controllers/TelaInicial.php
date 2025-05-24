@@ -6,6 +6,6 @@ class Carrinho extends CI_Controller
 
     public function index()
     {
-        $this->load->view('carrinho');
+        $this->load->view('telainicial');
     }
 }
