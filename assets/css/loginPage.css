@@ -104,12 +104,15 @@ body {
 }
 
 .inputContainer {
-  width: 100%;
+  width: 25rem;
   margin-bottom: 20px;
   padding: 10px;
   display: flex;
   justify-content: start;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .inputContainer label {
@@ -124,7 +127,7 @@ body {
 }
 
 .inputsCad {
-  width: 100%;
+  width: 25rem;
   height: 40px;
   border-radius: 5px;
   border: 2px solid grey;
@@ -144,16 +147,29 @@ body {
   background-color: black;
   padding: 0 5px;
 }
-
 #dataNasc {
   color: grey;
   transition: 200ms all;
 }
-
 #dataNasc:focus {
   color: white;
 }
-
+#submit{
+    cursor: pointer;
+    border: 2px solid blueviolet;
+    color: blueviolet;
+}
+.input-error input{
+  border-color: red !important;
+}
+.input-error label{
+  color: red;
+}
+.inputContainer div{
+  color: red;
+  font-size: 0.9rem;
+  min-height: 20px;
+}
 #sideSpaceBackground {
   display: flex;
   justify-content: center;
