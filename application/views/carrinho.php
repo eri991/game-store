@@ -2,16 +2,16 @@
 <html>
 <head>
 	<title>G-Max</title>
-	<link rel="icon" href="<?php echo base_url('assets/icon_Gmax.ico'); ?>" type="image/x-icon">
-	<link rel="shortcut icon" href="<?php echo base_url('assets/icon_Gmax.ico'); ?>" type="image/x-icon">
-	<link rel="stylesheet" href="<?php echo base_url('assets/carrinhoPage.css'); ?>">
+	<link rel="icon" href="<?php echo base_url('assets/img/icon_Gmax.ico'); ?>" type="image/x-icon">
+	<link rel="shortcut icon" href="<?php echo base_url('assets/img/icon_Gmax.ico'); ?>" type="image/x-icon">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/carrinhoPage.css');?> ?v=<?= time() ?>">
 </head>
 <body>
 
 	<header id='mainHeader'>
 		<nav id= 'mainNav'>
 			<div>
-				<img id= 'logoHeader' src="<?php echo base_url('assets/icon_Gmax.jpg')?>" alt="Logo">
+				<img id= 'logoHeader' src="<?php echo base_url('assets/img/icon_Gmax.jpg')?>" alt="Logo">
 				<p>Cadastrar</p>
 			</div>
 			<a href="https://help.steampowered.com/pt/" target="_blank">Precisa de ajuda?</a>

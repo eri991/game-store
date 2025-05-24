@@ -3,7 +3,7 @@
 <head>
 	<title>G-Max</title>
 	<link rel="shortcut icon" href="<?php echo base_url('assets/img/icon_Gmax.ico'); ?>" type="image/x-icon">
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/telainicial.css') ?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/telainicial.css');?> ?v=<?= time() ?>">
 </head>
 <body>
 

@@ -4,9 +4,9 @@
 <head>
 	<title>G-Max</title>
 	<link rel="icon" href="<?php echo base_url('assets/img/icon_Gmax.ico'); ?>" type="image/x-icon">
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/loginPage.css') ?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/loginPage.css')?> ?v=<?= time() ?>">
 </head>
-<script src="<?php echo base_url('controllers/Cadastro.php')?>"></script>
+<script ></script>
 <body>
 	<header id='mainHeader'>
 		<nav id='mainNav'>
@@ -26,27 +26,25 @@
 					<label for="nomeCompleto">Nome Completo</label>
 					<?= form_error('nomeCompleto','<div class="erroMsg">','</div>');?>
 				</div>
-				<div class="inputContainer">
-					<input type="text" name="nickname" id="nickname" class="inputsCad" placeholder=" ">
-					<label for="nickname">
-						Nickname
-					</label>
+				<div class="inputContainer <?= form_error('nickname') ? 'input-error':'' ?>">
+					<input type="text" name="nickname" id="nickname" class="inputsCad" placeholder=" " value="<?= set_value('nickname')?>">
+					<label for="nickname">Nickname</label>
+					<?= form_error('nickname','<div class="erroMsg">','</div>');?>
 				</div>
-				<div class="inputContainer">
-					<input type="email" name="email" id="email" class="inputsCad" placeholder=" ">
-					<label for="email">
-						Email
-					</label>
+				<div class="inputContainer <?= form_error('email') ? 'input-error':'' ?>" >
+					<input type="email" name="email" id="email" class="inputsCad" placeholder=" " value="<?= set_value('email')?>">
+					<label for="email">Email</label>
+					<?= form_error('email','<div class="erroMsg">','</div>');?>
 				</div>
-				<div class="inputContainer">
-					<input type="date" name="dataNasc" id="dataNasc" class="inputsCad" placeholder=" ">
-					<label for="dataNasc">
-						Data de Nascimento
-					</label>
+				<div class="inputContainer <?= form_error('dataNasc') ? 'input-error':'' ?>">
+					<input type="date" name="dataNasc" id="dataNasc" class="inputsCad" placeholder=" " value="<?= set_value('dataNasc')?>">
+					<label for="dataNasc">Data de Nascimento</label>
+					<?= form_error('dataNasc','<div class="erroMsg">','</div>');?>
 				</div>
-				<div class="inputContainer">
-					<input list="paises" id="pais" class="inputsCad" placeholder=" " autocomplete="off"/>
+				<div class="inputContainer <?= form_error('pais') ? 'input-error':'' ?>">
+					<input list="paises" id="pais" name="pais" class="inputsCad" placeholder=" " autocomplete="off" value="<?= set_value('pais')?>"/>
 					<label for="pais">País</label>
+					<?= form_error('pais','<div class="erroMsg">','</div>');?>
 					<datalist id="paises">
 						<option value="Afeganistão">
 						<option value="África do Sul">
@@ -248,19 +246,22 @@
 						<option value="Zimbábue">
 					</datalist>
 				</div>
-				<div class="inputContainer">
-					<input type="password" name="senha" id="senha" class="inputsCad" placeholder=" ">
-					<label for="senha">
-						Senha
-					</label>
+				<div class="inputContainer <?= form_error('senha') ? 'input-error':'' ?>">
+					<input type="password" name="senha" id="senha" class="inputsCad" placeholder=" " value="<?= set_value('senha')?>">
+					<label for="senha">Senha</label>
+					<?= form_error('senha','<div class="erroMsg">','</div>');?>
 				</div>
-				<div class="inputContainer">
-					<input type="password" name="confSenha" id="confSenha" class="inputsCad" placeholder=" ">
-					<label for="confSenha">
-						Confirmar Senha
-					</label>
+				<div class="inputContainer <?= form_error('confSenha') ? 'input-error':'' ?>">
+					<input type="password" name="confSenha" id="confSenha" class="inputsCad" placeholder=" " value="<?= set_value('confSenha')?>">
+					<label for="confSenha">Confirmar Senha</label>
+					<?= form_error('confSenha','<div class="erroMsg">','</div>');?>
 				</div>
-				<div class="inputContainer">
+				<label id="mostrarSenha">
+					<input type="checkbox" name="mostrarSenha">
+					<span id="mostrarSenhaCheckmark"></span>
+					Mostar Senha
+				</label>
+				<div class="inputContainer" >
 					<input type="submit" value="Cadastrar" class="inputsCad"id="submit">
 				</div>
 			</form>
@@ -268,7 +269,7 @@
 		<section id="sideSpaceBackground"
 			style="background-image: url(<?php echo base_url("assets/img/fundo_estelar.jpg") ?>);">
 			<img src='<?php echo base_url('assets/img/jinx.png') ?>' alt="Jinx">
-		</section>
+		gction>
 	</main>
 </body>
 
