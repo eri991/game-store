@@ -22,22 +22,22 @@
 			<form action="" id="cadForm" autocomplete="off" method="post" onsubmit="return formValidation()">
 				<h2>Cadastrar</h2>
 				<div class="inputContainer <?= form_error('nomeCompleto') ? 'input-error':'' ?>" >
-					<input type="text" name="nomeCompleto" id="nomeCompleto" class="inputsCad" placeholder=" " value="<?= set_value('nomeCompleto') ?>">
+					<input type="text" name="nomeCompleto" id="nomeCompleto" name="nomeCompleto" class="inputsCad" placeholder=" " value="<?= set_value('nomeCompleto') ?>">
 					<label for="nomeCompleto">Nome Completo</label>
 					<?= form_error('nomeCompleto','<div class="erroMsg">','</div>');?>
 				</div>
 				<div class="inputContainer <?= form_error('nickname') ? 'input-error':'' ?>">
-					<input type="text" name="nickname" id="nickname" class="inputsCad" placeholder=" " value="<?= set_value('nickname')?>">
+					<input type="text" name="nickname" id="nickname" name="nickname" class="inputsCad" placeholder=" " value="<?= set_value('nickname')?>">
 					<label for="nickname">Nickname</label>
 					<?= form_error('nickname','<div class="erroMsg">','</div>');?>
 				</div>
 				<div class="inputContainer <?= form_error('email') ? 'input-error':'' ?>" >
-					<input type="email" name="email" id="email" class="inputsCad" placeholder=" " value="<?= set_value('email')?>">
+					<input type="email" name="email" id="email" name="email"  class="inputsCad" placeholder=" " value="<?= set_value('email')?>">
 					<label for="email">Email</label>
 					<?= form_error('email','<div class="erroMsg">','</div>');?>
 				</div>
 				<div class="inputContainer <?= form_error('dataNasc') ? 'input-error':'' ?>">
-					<input type="date" name="dataNasc" id="dataNasc" class="inputsCad" placeholder=" " value="<?= set_value('dataNasc')?>">
+					<input type="date" name="dataNasc" id="dataNasc" name="dataNasc" class="inputsCad" placeholder=" " value="<?= set_value('dataNasc')?>">
 					<label for="dataNasc">Data de Nascimento</label>
 					<?= form_error('dataNasc','<div class="erroMsg">','</div>');?>
 				</div>

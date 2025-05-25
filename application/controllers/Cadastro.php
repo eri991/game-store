@@ -55,7 +55,28 @@ class Cadastro extends CI_Controller {
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('cadastro');
         } else {
-            $this->load->view('telainicial');
+           
+            $primeiro_nome = $this->input->post('nomeCompleto');
+            $nickname = $this->input->post('nickname');
+            $email = $this->input->post('email');
+            $pais = $this->input->post('pais');
+            $data_nasc = $this->input->post('dataNacs');
+            $senha = $this->input->post('senha');
+            $conf_senha = $this->input->post('confSenha');
+
+            $dados = array(
+                'nomeCompleto' => $primeiro_nome,
+                'nickname' => $nickname,
+                'email' => $email,
+                'pais' => $pais,
+                'dataNasc' => $data_nasc,
+                'senha' => $senha,
+                'confSenha' => $conf_senha,
+
+            );
+               $this->db->insert('usuarios', $dados);
+
+             $this->load->view('telainicial');
         }
     }
 }
