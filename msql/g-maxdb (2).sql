@@ -31,7 +31,7 @@ CREATE TABLE "biblioteca" (
   "id_jogo" int NOT NULL,
   "id_usuario" int NOT NULL,
   "data_compra" date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 -- --------------------------------------------------------
 
@@ -39,22 +39,21 @@ CREATE TABLE "biblioteca" (
 -- Table structure for table `carrinho`
 --
 
-CREATE TABLE `carrinho` (
-  `id_carrinho` int NOT NULL,
-  `id_usuario` int NOT NULL,
-  `data_criacao` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
+CREATE TABLE "carrinho" (
+  "id_carrinho" int NOT NULL,
+  "id_usuario" int NOT NULL,
+  "data_criacao" date DEFAULT NULL
+) 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `categoria`
 --
 
-CREATE TABLE `categoria` (
-  `id_categoria` int NOT NULL,
-  `nome_categoria` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE "categoria" (
+  "id_categoria" int NOT NULL,
+  "nome_categoria" varchar(200) DEFAULT NULL
+)
 
 -- --------------------------------------------------------
 
@@ -62,12 +61,12 @@ CREATE TABLE `categoria` (
 -- Table structure for table `itens_carrinho`
 --
 
-CREATE TABLE `itens_carrinho` (
-  `id_item` int NOT NULL,
-  `id_jogo` int NOT NULL,
-  `id_carrinho` int NOT NULL,
-  `quantidade` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE "itens_carrinho" (
+  "id_item" int NOT NULL,
+  "id_jogo" int NOT NULL,
+  "id_carrinho" int NOT NULL,
+  "quantidade" int DEFAULT NULL
+)
 
 -- --------------------------------------------------------
 
@@ -75,15 +74,15 @@ CREATE TABLE `itens_carrinho` (
 -- Table structure for table `jogo`
 --
 
-CREATE TABLE `jogo` (
-  `id_jogo` int NOT NULL,
-  `id_categoria` int NOT NULL,
-  `titulo` varchar(200) DEFAULT NULL,
-  `descricao` varchar(2000) DEFAULT NULL,
-  `preco` varchar(7) DEFAULT NULL,
-  `estoque` varchar(7) DEFAULT NULL,
-  `url` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE "jogo" (
+  "id_jogo" int NOT NULL,
+  "id_categoria" int NOT NULL,
+  "titulo" varchar(200) DEFAULT NULL,
+  "descricao" varchar(2000) DEFAULT NULL,
+  "preco" varchar(7) DEFAULT NULL,
+  "estoque" varchar(7) DEFAULT NULL,
+  "url" varchar(200) DEFAULT NULL
+) 
 
 -- --------------------------------------------------------
 
@@ -91,17 +90,17 @@ CREATE TABLE `jogo` (
 -- Table structure for table `usuarios`
 --
 
-CREATE TABLE `usuarios` (
-  `id_user` int NOT NULL,
-  `primeiro_nome` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sobrenome` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `data_nasc` date NOT NULL,
-  `pais` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nickname` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `data_cadastro` date NOT NULL,
-  `email` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `senha` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE "usuarios" (
+  "id_user" int NOT NULL,
+  "primeiro_nome" varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  "sobrenome" varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  "data_nasc" date NOT NULL,
+  "pais" varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  "nickname" varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  "data_cadastro" date NOT NULL,
+  "email" varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  "senha" varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
+) 
 
 --
 -- Indexes for dumped tables
@@ -110,8 +109,8 @@ CREATE TABLE `usuarios` (
 --
 -- Indexes for table `biblioteca`
 --
-ALTER TABLE `biblioteca`
-  ADD KEY `id_usuario` (`id_usuario`),
+ALTER TABLE "biblioteca"
+  ADD KEY "id_usuario" ("id_usuario"),
   ADD KEY `id_jogo` (`id_jogo`);
 
 --
