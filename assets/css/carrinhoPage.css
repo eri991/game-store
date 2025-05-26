@@ -101,6 +101,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    user-select: none;
 }
 .aumentarQnt, .diminuirQnt {
     width: 30%;
@@ -113,7 +114,11 @@ body {
 .imgLinhaProduto {
     width: 12dvw;
     height: 12dvh;
-    background-color: red;
+}
+.imgLinhaProduto > img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 .infosProduto {
     padding-inline: 1dvw;
@@ -150,9 +155,9 @@ body {
     height: 5dvh;
 }
 .imgResumo {
+    border: 2px solid blueviolet;
     width: 20%;
     height: 90%;
-    background-color: red;
     margin-right: 1dvw;
 }
 .listaPrecos {

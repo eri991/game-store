@@ -167,6 +167,7 @@ body {
   border-radius: 5px;
   margin-right: 10px;
   margin-left: 10px;
+  transition: 100ms all;
 }
 #mostrarSenha input:checked + #mostrarSenhaCheckmark{
   background-color: blueviolet;
