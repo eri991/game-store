@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE "biblioteca" (
   "id_jogo" int NOT NULL,
   "id_usuario" int NOT NULL,
-  "data_compra" date DEFAULT NULL
-) 
+  "data_compra" date DEFAULT CURRENT_TIMESTAMP
+)
 
 -- --------------------------------------------------------
 
@@ -42,7 +42,7 @@ CREATE TABLE "biblioteca" (
 CREATE TABLE "carrinho" (
   "id_carrinho" int NOT NULL,
   "id_usuario" int NOT NULL,
-  "data_criacao" date DEFAULT NULL
+  "data_criacao" date DEFAULT CURRENT_TIMESTAMP
 ) 
 -- --------------------------------------------------------
 
@@ -97,7 +97,7 @@ CREATE TABLE "usuarios" (
   "data_nasc" date NOT NULL,
   "pais" varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   "nickname" varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  "data_cadastro" date NOT NULL,
+  "data_cadastro" date DEFAULT CURRENT_TIMESTAMP,
   "email" varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   "senha" varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
 ) 
