@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Cadastro extends CI_Controller {
 
     public $form_validation;  // propriedade pública da classe, fora de qualquer função
-
+    public $db;
     public function __construct()
     {
         parent::__construct();
@@ -54,8 +54,7 @@ class Cadastro extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('cadastro');
-        } else {
-           
+        } else {          
             $primeiro_nome = $this->input->post('nomeCompleto');
             $nickname = $this->input->post('nickname');
             $email = $this->input->post('email');
@@ -63,7 +62,6 @@ class Cadastro extends CI_Controller {
             $data_nasc = $this->input->post('dataNacs');
             $senha = $this->input->post('senha');
             $conf_senha = $this->input->post('confSenha');
-
             $dados = array(
                 'nomeCompleto' => $primeiro_nome,
                 'nickname' => $nickname,
@@ -72,11 +70,9 @@ class Cadastro extends CI_Controller {
                 'dataNasc' => $data_nasc,
                 'senha' => $senha,
                 'confSenha' => $conf_senha,
-
             );
-               $this->db->insert('usuarios', $dados);
-
-             $this->load->view('telainicial');
+            $this->db->insert('usuarios', $dados);
+            $this->load->view('telainicial');
         }
     }
 }
