@@ -3,6 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Carrinho extends CI_Controller
 {
+    public $db;
     public $Carrinho_model;
     public function __construct() {
         parent::__construct();
@@ -18,6 +19,12 @@ class Carrinho extends CI_Controller
     public function mudarQuantidade($id_item, $delta) {
         $this->load->model('Carrinho_model');
         $this->Carrinho_model->mudarQnt($id_item, $delta);
-        redirect('carrinho'); // ou para a página que mostrar o carrinho
+        redirect('carrinho');
+    }
+
+    public function adicionarItem($id_jogo, $quantidade=1, $id_carrinho = 1) {
+        $this->load->model('Carrinho_model');
+        $this->Carrinho_model->adicionarItem($id_jogo, $quantidade, $id_carrinho);
+        redirect('carrinho');
     }
 }

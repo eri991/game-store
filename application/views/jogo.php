@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title><?= $jogo['titulo'] ?> - G-Max</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/jogoPage.css') ?>?v=<?= time() ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
-    function mudarQnt(id_item, delta) {
-        window.location.href = '<?= base_url("carrinho/mudarQuantidade") ?>/' + id_item + '/' + delta;
-    }
+        function adicionarItem(id_jogo, quantidade=1, id_carrinho=1) {
+            window.location.href = '<?= base_url("carrinho/adicionarItem") ?>/' + id_jogo + '/' + quantidade + '/' + id_carrinho;
+        }
     </script>
 </head>
 <body>
@@ -24,7 +25,8 @@
     <main class="mainJogo">
         <div class="heading">
             <h1 class="nomeJogo"><?= $jogo['titulo'] ?></h1>
-            <p class="nota"><?= number_format($jogo['preco'], 2, ',', '.') ?> BRL</p>
+            <p class="stars"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+            <p class="nota">4.6</p>
         </div>
         <div class="wrapLeft">
             <div class="imgDiv">
@@ -42,7 +44,7 @@
             </div>
             <div class="botoesDiv">
                 <button class="compre">Compre agora</button>
-                <button class="addCarrinho">Adicionar ao carrinho</button>
+                <button class="addCarrinho" onclick="adicionarItem('<?= $jogo['id_jogo'] ?>')">Adicionar ao carrinho</button>
             </div>
         </div>
     </main>

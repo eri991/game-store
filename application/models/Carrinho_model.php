@@ -23,6 +23,14 @@ class Carrinho_model extends CI_Model {
                 $this->db->update('itens_carrinho', array('quantidade' => $novaQnt));
             }
         }
-        
+    }
+
+    public function adicionarItem($id_jogo, $quantidade=1, $id_carrinho = 1) {
+        $dados = array(
+            'id_jogo' => $id_jogo,
+            'quantidade' => $quantidade,
+            'id_carrinho' => $id_carrinho
+        );
+        $this->db->insert('itens_carrinho', $dados);
     }
 }
