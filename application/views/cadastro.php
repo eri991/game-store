@@ -49,7 +49,7 @@
 					<?= form_error('email','<div class="erroMsg">','</div>');?>
 				</div>
 				<div class="inputContainer <?= form_error('dataNasc') ? 'input-error':'' ?>">
-					<input type="date" name="dataNasc" id="dataNasc" name="dataNasc" class="inputsCad" placeholder=" " value="<?= set_value('dataNasc',date('Y-m-d'))?>" max="<?= date('Y-m-d') ?>>
+					<input type="date" name="dataNasc" id="dataNasc"  class="inputsCad" placeholder=" "  value="<?= set_value('dataNasc')?>" max="<?= date('Y-m-d') ?>">
 					<label for="dataNasc">Data de Nascimento</label>
 					<?= form_error('dataNasc','<div class="erroMsg">','</div>');?>
 				</div>
