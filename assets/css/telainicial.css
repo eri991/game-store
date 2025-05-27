@@ -5,85 +5,94 @@
 }
 
 body {
-    background-image: url('/assets/fundo\ telainicial.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #mainHeader{
-    height: 80px;
-    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
 }
 
 #mainNav{
+    height: 7rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
 }
-
 #mainNav > #logoman {
     display: flex;
-    margin: 100px;
+    flex-direction: row;
+    align-items: center;
+    color: blueviolet;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #mainNav > #nomes {
     display: flex;
 }
-
-#mainNav > #logoman > #nomes > h1 {
-    font-size: 36px;
-    text-align: center;
-    color: rgb(132, 0, 255);
-    filter: drop-shadow(1px 1px 2px #8C52FF);
-}
-
-
-#mainNav > #logoman > #nomes > h2 {
-    font-size: 24px;
-    color: white;
-    text-align: center;
-}
-
 #logoHeader{
     width: 70px;
 }
 
 #divLista {
     display: flex;
-    margin-right: 50px;
+    margin-right: 2rem;
 }
 
 .listaNav {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
     list-style: none;
 }
-
 .listaNav > li {
-    margin: 30px;
-    display: inline-block;
-    position: relative;
     color: white;
-
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5rem;
+    height: 3rem;
 }
-
-.listaNav > li > .input-container{
+.listaNav li:last-of-type{
+    margin-right: 0px;
+}
+.input-container{
+    position: relative;
     width: 100%;
 }
-
-.listaNav > li > .input-container >  input {
-    height: 30px;
-    width: 200px;
+.input-container >  input {
+    height: 1.2rem;
+    width: 17rem;
+    padding: 1.1rem;
     border-radius: 20px;
     position: relative;
-    background-color: #4800d827;
-    margin: -20px;
+    background-color: black;
+    outline: none;
+    color: white;
 }
-
+#searchPlaceholder{
+    color: white;
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    user-select: none;
+    pointer-events: none;
+    font-size: 16px;
+    color: grey;
+}
+#searchInput:focus{
+    border: 2px solid blueviolet
+}
+#searchInput:focus + #searchPlaceholder{
+    display: none;
+}
 .listaNav > li > .input-container > img {
     width: 30px;
     height: 30px;

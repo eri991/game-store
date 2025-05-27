@@ -5,28 +5,28 @@
 	<link rel="shortcut icon" href="<?php echo base_url('assets/img/icon_Gmax.ico'); ?>" type="image/x-icon">
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/telainicial.css');?> ?v=<?= time() ?>">
 </head>
-<body>
+<body style="background-image: url('<?php echo base_url('assets/img/fundo_telainicial.jpg')?>')">
 
 	<header id='mainHeader'>
 		<nav id= 'mainNav'>
 			<div id="logoman">
-				<img id= 'logoHeader' src="<?php echo base_url('assets/img/icon_Gmax.ico') ?>" alt="Logo">
-                <div id="nomes">
-                    <h1>G-MAX</h1>
-                    <h2>UNIVERSE</h2>
-                </div>
-			    </div>
+    			<img id= 'logoHeader' src="<?php echo base_url('assets/img/icon_Gmax.ico') ?>" alt="Logo">
+                <h1>G-Max</h1>
+			</div>
             <div id="divLista">
                 <ul class="listaNav">
-                    <li>INICIO</li>
+                    <li>Início</li>
                     <li>
                         <div class="input-container">
-                            <input type="text" placeholder="   PESQUISA">
-                            <img src="" alt="">
+                            <input id="searchInput"type="search" placeholder=" ">
+                            <label for="searchInput" id="searchPlaceholder">
+                                
+                                Pesquisar
+                            </label>
                         </div>
                     </li>
-                    <li><img src="" alt="IMAGEM"></li>
-                    <li><img src="" alt="IMAGEM"></li>
+                    <li><img src="" alt="Imagem"></li>
+                    <li><img src="" alt="Imagem"></li>
                 </ul>
             </div>
 		</nav>
