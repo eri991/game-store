@@ -1,6 +1,6 @@
 <?php
 
-class Usuarios_model extends CI_Model{
+class Cadastro_model extends CI_Model{
     function existe_email($email){
         $query = $this->db->get_where('usuarios',['email' => $email]);
         return $query->num_rows() > 0;

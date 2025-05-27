@@ -11,16 +11,16 @@ class Cadastro extends CI_Controller {
         $this->load->library('form_validation');
     }
     public function checar_email($email){
-        $this->load->model('Usuarios_model');
-        if($this->Usuarios_model->existe_email($email)){
+        $this->load->model('Cadastro_model');
+        if($this->Cadastro_model->existe_email($email)){
             $this->form_validation->set_message('checar_email','Já existe um usuário com esse email');
             return FALSE;
         }
         return TRUE;
     }
     public function checar_nickname($nickname){
-        $this->load->model('Usuarios_model');
-        if($this->Usuarios_model->existe_nickname($nickname)){
+        $this->load->model('Cadastro_model');
+        if($this->Cadastro_model->existe_nickname($nickname)){
             $this->form_validation->set_message('checar_nickname','Já existe um usuário com esse nickname');
             return FALSE;
         }
