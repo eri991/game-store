@@ -13,7 +13,7 @@ class Cadastro extends CI_Controller {
     public function checar_email($email){
         $this->load->model('Usuarios_model');
         if($this->Usuarios_model->existe_email($email)){
-            $this->form_validation->set_message('checar_email','Já existe uma conta com esse email');
+            $this->form_validation->set_message('checar_email','Já existe um usuário com esse email');
             return FALSE;
         }
         return TRUE;
