@@ -26,7 +26,9 @@
         <div class="linhaProduto">
             <div class="wrapProduto">
                 <div class="qntProduto">
-                    <button class="aumentarQnt"><i class="fa-solid fa-plus"></i></button>
+                    <button class="aumentarQnt">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
                     <p class="qntSelecionada"><?= $item->quantidade ?></p>
                     <button class="diminuirQnt">-</button>
                 </div>
