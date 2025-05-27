@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#mainHeader {
+  background-color: black;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#mainNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+#logoHeader {
+  width: 70px;
+}
+
+#mainNav > div {
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#mainNav > div > p,
+#mainNav > a {
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+#mainNav > a:hover {
+  color: white;
+  transition: all 200ms;
+}
+
+/* Página de jogo */
+.mainJogo {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 10%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.nomeJogo {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+.nota {
+  font-size: 1rem;
+  color: gray;
+}
+
+/* Esquerda */
+.wrapLeft {
+  width: 55%;
+}
+
+.imgDiv {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.imgJogo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.descricao {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.categorias {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.categoriasTitulo {
+  font-size: 1.1rem;
+  margin-right: 10px;
+  color: blueviolet;
+}
+
+.categoria {
+  background-color: blueviolet;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.ponto {
+  color: white;
+}
+
+/* Direita */
+.wrapRight {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.classificacao {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.idadeDiv {
+  width: 60px;
+  height: 60px;
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.idadeImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.idade {
+  font-size: 1.2rem;
+  color: blueviolet;
+}
+
+.conteudoSensivel {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.divPreco {
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.desconto {
+  font-size: 1.5rem;
+  color: red;
+  font-weight: bold;
+}
+
+.precoAntes {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.precoDepois {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.botoesDiv {
+  display: flex;
+  gap: 20px;
+}
+
+.compre,
+.addCarrinho {
+  flex: 1;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: 2px solid blueviolet;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.compre:hover,
+.addCarrinho:hover {
+  background-color: blueviolet;
+  color: white;
+}

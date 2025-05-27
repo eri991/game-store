@@ -17,7 +17,6 @@
 			document.getElementById('confSenha').type = 'password'
 		}
 	}
-	
 </script>
 <body>
 	<header id='mainHeader'>

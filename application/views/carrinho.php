@@ -23,24 +23,25 @@
 <main class='mainCarrinho'>
     <div class="listaProdutos">
         <?php foreach($itens as $item): ?>
-        <div class="linhaProduto">
-            <div class="wrapProduto">
-                <div class="qntProduto">
-                    <button class="aumentarQnt"><i class="fa-solid fa-plus"></i></button>
-                    <p class="qntSelecionada"><?= $item->quantidade ?></p>
-                    <button class="diminuirQnt">-</button>
-                </div>
-                <div class="imgLinhaProduto">
-                    <img src="<?= htmlspecialchars($item->url) ?>" alt="Imagem do jogo">
-                </div>
-                <div class="infosProduto">
-                    <p class='tituloProduto'><?= htmlspecialchars($item->titulo) ?></p>
-                    <p class="descProduto"><?= htmlspecialchars($item->descricao) ?></p>
-                    <p class="precoProduto">R$ <?= number_format($item->preco, 2, ',', '.') ?></p>
+            <div class="linhaProduto">
+                <div class="wrapProduto">
+                    <div class="qntProduto">
+                        <button class="aumentarQnt" onclick="mudarQnt(<?= $item->id_item ?>, 1)"><i class="fa-solid fa-plus"></i></button>
+                        <p class="qntSelecionada"><?= $item->quantidade ?></p>
+                        <button class="diminuirQnt" onclick="mudarQnt(<?= $item->id_item ?>, -1)">-</button>
+                    </div>
+                    <div class="imgLinhaProduto">
+                        <img src="<?= htmlspecialchars($item->url) ?>" alt="Imagem do jogo">
+                    </div>
+                    <div class="infosProduto">
+                        <p class='tituloProduto'><?= htmlspecialchars($item->titulo) ?></p>
+                        <p class="descProduto"><?= htmlspecialchars($item->descricao) ?></p>
+                        <p class="precoProduto">R$ <?= number_format($item->preco, 2, ',', '.') ?></p>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php endforeach; ?>
+
     </div>
 
     <div class="cardPrecos">
@@ -78,6 +79,10 @@
         </div>
     </div>
 </main>
-
+<script>
+    function mudarQnt(id_item, delta) {
+        window.location.href = '<?= base_url("carrinho/mudarQuantidade") ?>/' + id_item + '/' + delta;
+    }
+    </script>
 </body>
 </html>
