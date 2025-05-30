@@ -5,7 +5,7 @@
 	<link rel="shortcut icon" href="<?php echo base_url('assets/img/icon_Gmax.ico'); ?>" type="image/x-icon">
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/telainicial.css');?> ?v=<?= time() ?>">
 </head>
-<body style="background-image: url('<?php echo base_url('assets/img/fundo_telainicial.jpg')?>')">
+<body style="background-image: url('<?php echo base_url('assets/img/fundo2.png')?>')">
 
 	<header id='mainHeader'>
 		<nav id= 'mainNav'>
@@ -32,10 +32,13 @@
 		</nav>
 	</header>
     <main class="wrapper">
-        <h1>SOBRE NÓS</h1>    
-        <h3>Lorem, ipsum dolor sit amet consectetur <br>
-            adipisicing elit. Nemo consectetur quam, quaerat cupiditate qui rerum totam odio? <br>
-            Ut temporibus autem ex repellat eveniet, voluptatem iste a! Provident optio repudiandae laboriosam.</h3>
+        <div class="divTexto">
+            <h1>SOBRE NÓS</h1>    
+            <h3 class="textoSobre">Lorem, ipsum dolor sit amet consectetur <br>
+                adipisicing elit. Nemo consectetur quam, quaerat cupiditate qui rerum totam odio? <br>
+                Ut temporibus autem ex repellat eveniet, voluptatem iste a! Provident optio repudiandae laboriosam.</h3>
+        </div>
+        
     </main>
 </body>
 </html>

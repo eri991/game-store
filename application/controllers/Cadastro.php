@@ -88,8 +88,6 @@ class Cadastro extends CI_Controller {
                 'pais' => $pais,
                 'data_nasc' => $data_nasc,
                 'senha' => $senha,
-                'confSenha' => $conf_senha,
-
             );
             $this->db->insert('usuarios', $dados);
             $this->load->view('telainicial');

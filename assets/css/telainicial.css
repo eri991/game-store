@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
     border: 0px;
@@ -9,22 +9,22 @@ body {
     background-size: cover;
 }
 
-#mainHeader{
+#mainHeader {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#mainNav{
+#mainNav {
     height: 7rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: black;
 }
-#mainNav > #logoman {
+
+#mainNav>#logoman {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -32,10 +32,11 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#mainNav > #nomes {
+#mainNav>#nomes {
     display: flex;
 }
-#logoHeader{
+
+#logoHeader {
     width: 70px;
 }
 
@@ -51,7 +52,8 @@ body {
     flex-direction: row;
     list-style: none;
 }
-.listaNav > li {
+
+.listaNav>li {
     color: white;
     font-size: 1.1rem;
     display: flex;
@@ -60,14 +62,17 @@ body {
     margin-right: 5rem;
     height: 3rem;
 }
-.listaNav li:last-of-type{
+
+.listaNav li:last-of-type {
     margin-right: 0px;
 }
-.input-container{
+
+.input-container {
     position: relative;
     width: 100%;
 }
-.input-container >  input {
+
+.input-container>input {
     height: 1.2rem;
     width: 17rem;
     padding: 1.1rem;
@@ -77,7 +82,8 @@ body {
     outline: none;
     color: white;
 }
-#searchPlaceholder{
+
+#searchPlaceholder {
     color: white;
     position: absolute;
     left: 15px;
@@ -87,24 +93,52 @@ body {
     font-size: 16px;
     color: grey;
 }
-#searchInput:focus{
+
+#searchInput:focus {
     border: 2px solid blueviolet
 }
-#searchInput:focus + #searchPlaceholder{
+
+#searchInput:focus+#searchPlaceholder {
     display: none;
 }
-.listaNav > li > .input-container > img {
+
+.listaNav>li>.input-container>img {
     width: 30px;
     height: 30px;
     position: absolute;
     transform: translateY(-50%);
-    right: -20px; 
+    right: -20px;
     top: 50%;
     border-radius: 20px;
     background-color: black;
 }
 
-.wrapper > h1 {
+.wrapper>h1 {
     color: white;
-    
 }
+
+.textoSobre {
+    color: white;
+}
+
+.divTexto {
+    background-color: aqua;
+}
+
+
+/*
+- cabeçalho
+    -imagens (icons)
+    -logo brilhinhos bonitos
+    -arrumar a barra de pesquisa
+    -mudar a fonte
+
+- main
+    -alinhar o texto
+    -deixar a fonte bonita
+
+- area de jogos
+    -mostar os jogos em uma roll
+    -criar a função da seta 
+    -imagens
+*/
