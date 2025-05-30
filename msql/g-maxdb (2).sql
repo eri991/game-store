@@ -53,7 +53,7 @@ CREATE TABLE `jogo` (
   `id_categoria` INT NOT NULL,
   `titulo` VARCHAR(200) DEFAULT NULL,
   `descricao` VARCHAR(2000) DEFAULT NULL,
-  `preco` VARCHAR(7) DEFAULT NULL,
+  `preco` DECIMAL(10,2) DEFAULT NULL,
   `estoque` VARCHAR(7) DEFAULT NULL,
   `url` VARCHAR(200) DEFAULT NULL
 );
