@@ -6,7 +6,18 @@
 	<link rel="icon" href="<?php echo base_url('assets/img/icon_Gmax.ico'); ?>" type="image/x-icon">
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/loginPage.css')?> ?v=<?= time() ?>">
 </head>
-<script ></script>
+<script type="text/javascript">
+	function mostrar() {
+		checkbox = document.getElementById('checkboxMostrarSenha');
+		if(checkbox.checked){
+			document.getElementById('senha').type = 'text'
+			document.getElementById('confSenha').type = 'text'
+		} else {
+			document.getElementById('senha').type = 'password'
+			document.getElementById('confSenha').type = 'password'
+		}
+	}
+</script>
 <body>
 	<header id='mainHeader'>
 		<nav id='mainNav'>
@@ -37,7 +48,7 @@
 					<?= form_error('email','<div class="erroMsg">','</div>');?>
 				</div>
 				<div class="inputContainer <?= form_error('dataNasc') ? 'input-error':'' ?>">
-					<input type="date" name="dataNasc" id="dataNasc" name="dataNasc" class="inputsCad" placeholder=" " value="<?= set_value('dataNasc')?>">
+					<input type="date" name="dataNasc" id="dataNasc"  class="inputsCad" placeholder=" "  value="<?= set_value('dataNasc')?>" max="<?= date('Y-m-d') ?>">
 					<label for="dataNasc">Data de Nascimento</label>
 					<?= form_error('dataNasc','<div class="erroMsg">','</div>');?>
 				</div>
@@ -257,9 +268,9 @@
 					<?= form_error('confSenha','<div class="erroMsg">','</div>');?>
 				</div>
 				<label id="mostrarSenha">
-					<input type="checkbox" name="mostrarSenha">
+					<input type="checkbox" name="mostrarSenha" id="checkboxMostrarSenha" onclick="mostrar()">
 					<span id="mostrarSenhaCheckmark"></span>
-					Mostar Senha
+					Mostrar Senha
 				</label>
 				<div class="inputContainer" >
 					<input type="submit" value="Cadastrar" class="inputsCad"id="submit">
