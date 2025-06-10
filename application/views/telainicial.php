@@ -14,7 +14,7 @@
                 <div id="nomes">
                     <h1>G-MAX</h1>
                     <h2>UNIVERSE</h2>
-                </div>
+                </div> 
 			    </div>
             <div id="divLista">
                 <ul class="listaNav">
