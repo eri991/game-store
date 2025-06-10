@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+#mainHeader {
+  background-color: black;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#mainNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+#logoHeader {
+  width: 70px;
+}
+
+#mainNav > div {
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#mainNav > div > p {
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#mainNav > a {
+  color: blueviolet;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+
+#mainNav > a::after {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+#mainNav > a:hover {
+  color: white;
+  transition: all 200ms;
+}
+
+.mainCarrinho {
+    width: 100%;
+    height: 80dvh;
+    padding-inline: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    color: white;
+}
+.listaProdutos {
+    width: 60%;
+    
+}
+
+.linhaProduto {
+    padding-block: 1.25dvh;
+    border-radius: 5px;
+    border: 5px solid blueviolet;
+    margin-bottom: 1dvh;
+    width: 100%;
+}
+
+.wrapProduto {
+    padding-inline: 1dvw;
+    padding-block: 1dvh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.qntProduto {
+    padding-inline: 1dvw;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.aumentarQnt, .diminuirQnt {
+    width: 30%;
+    height: 30%;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    border: 2px solid blueviolet;
+}
+.imgLinhaProduto {
+    width: 12dvw;
+    height: 12dvh;
+    background-color: red;
+}
+.infosProduto {
+    padding-inline: 1dvw;
+    height: 12dvh;
+}
+.tituloProduto {
+    font-size: 1.25rem;
+}
+.descProduto {
+    margin-block: 1dvh;
+    font-size: 0.75rem;
+}
+.precoProduto {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cardPrecos {
+    width: 30%;
+    padding-inline: 1dvw;
+    padding-block: 1dvh;
+}
+.cabecalhoResumo {
+    border-bottom: 2px solid white;
+    font-size: 1.5rem;
+    margin-block: 1dvw;
+    padding-block: 1dvh;
+}
+.imagensProdutos {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 5dvh;
+}
+.imgResumo {
+    width: 20%;
+    height: 90%;
+    background-color: red;
+    margin-right: 1dvw;
+}
+.listaPrecos {
+    height: 60%;
+}
+.linhaPreco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.valorTotal {
+    margin-block: 1dvh;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.continuarCompra {
+    width: 100%;
+    height: 5dvh;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid blueviolet;
+}

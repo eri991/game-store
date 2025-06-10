@@ -57,6 +57,20 @@ class CI_Loader {
 	 *
 	 * @var	int
 	 */
+	public $form_validation;
+	public $benchmark;
+    public $hooks;
+    public $config;
+    public $log;
+    public $utf8;
+    public $uri;
+    public $router;
+    public $output;
+    public $security;
+    public $input;
+    public $lang;
+    public $load;
+
 	protected $_ci_ob_level;
 
 	/**
