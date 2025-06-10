@@ -49,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		EllisLab Dev Team
  * @link		https://codeigniter.com/userguide3/libraries/uri.html
  */
+
 class CI_URI {
 
 	/**
@@ -56,6 +57,17 @@ class CI_URI {
 	 *
 	 * @var	array
 	 */
+	public $benchmark;
+    public $hooks;
+    public $config;
+    public $log;
+    public $utf8;
+    public $router;
+    public $output;
+    public $security;
+    public $input;
+    public $lang;
+    public $load;
 	public $keyval = array();
 
 	/**
