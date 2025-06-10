@@ -6,7 +6,18 @@
 	<link rel="icon" href="<?php echo base_url('assets/img/icon_Gmax.ico'); ?>" type="image/x-icon">
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/loginPage.css')?> ?v=<?= time() ?>">
 </head>
-<script ></script>
+<script type="text/javascript">
+	function mostrar() {
+		checkbox = document.getElementById('checkboxMostrarSenha');
+		if(checkbox.checked){
+			document.getElementById('senha').type = 'text'
+			document.getElementById('confSenha').type = 'text'
+		} else {
+			document.getElementById('senha').type = 'password'
+			document.getElementById('confSenha').type = 'password'
+		}
+	}
+</script>
 <body>
 	<header id='mainHeader'>
 		<nav id='mainNav'>
@@ -22,22 +33,22 @@
 			<form action="" id="cadForm" autocomplete="off" method="post" onsubmit="return formValidation()">
 				<h2>Cadastrar</h2>
 				<div class="inputContainer <?= form_error('nomeCompleto') ? 'input-error':'' ?>" >
-					<input type="text" name="nomeCompleto" id="nomeCompleto" class="inputsCad" placeholder=" " value="<?= set_value('nomeCompleto') ?>">
+					<input type="text" name="nomeCompleto" id="nomeCompleto" name="nomeCompleto" class="inputsCad" placeholder=" " value="<?= set_value('nomeCompleto') ?>">
 					<label for="nomeCompleto">Nome Completo</label>
 					<?= form_error('nomeCompleto','<div class="erroMsg">','</div>');?>
 				</div>
 				<div class="inputContainer <?= form_error('nickname') ? 'input-error':'' ?>">
-					<input type="text" name="nickname" id="nickname" class="inputsCad" placeholder=" " value="<?= set_value('nickname')?>">
+					<input type="text" name="nickname" id="nickname" name="nickname" class="inputsCad" placeholder=" " value="<?= set_value('nickname')?>">
 					<label for="nickname">Nickname</label>
 					<?= form_error('nickname','<div class="erroMsg">','</div>');?>
 				</div>
 				<div class="inputContainer <?= form_error('email') ? 'input-error':'' ?>" >
-					<input type="email" name="email" id="email" class="inputsCad" placeholder=" " value="<?= set_value('email')?>">
+					<input type="email" name="email" id="email" name="email"  class="inputsCad" placeholder=" " value="<?= set_value('email')?>">
 					<label for="email">Email</label>
 					<?= form_error('email','<div class="erroMsg">','</div>');?>
 				</div>
 				<div class="inputContainer <?= form_error('dataNasc') ? 'input-error':'' ?>">
-					<input type="date" name="dataNasc" id="dataNasc" class="inputsCad" placeholder=" " value="<?= set_value('dataNasc')?>">
+					<input type="date" name="dataNasc" id="dataNasc"  class="inputsCad" placeholder=" "  value="<?= set_value('dataNasc')?>" max="<?= date('Y-m-d') ?>">
 					<label for="dataNasc">Data de Nascimento</label>
 					<?= form_error('dataNasc','<div class="erroMsg">','</div>');?>
 				</div>
@@ -257,9 +268,9 @@
 					<?= form_error('confSenha','<div class="erroMsg">','</div>');?>
 				</div>
 				<label id="mostrarSenha">
-					<input type="checkbox" name="mostrarSenha">
+					<input type="checkbox" name="mostrarSenha" id="checkboxMostrarSenha" onclick="mostrar()">
 					<span id="mostrarSenhaCheckmark"></span>
-					Mostar Senha
+					Mostrar Senha
 				</label>
 				<div class="inputContainer" >
 					<input type="submit" value="Cadastrar" class="inputsCad"id="submit">
