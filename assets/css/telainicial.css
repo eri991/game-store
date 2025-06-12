@@ -1,8 +1,13 @@
+<<<<<<< HEAD
  * {
+=======
+    * {
+>>>>>>> e795a8abfafeaf13025866c1b1cc1226811064c3
         padding: 0px;
         margin: 0px;
         border: 0px;
     }
+<<<<<<< HEAD
     
     body {
         background-image: url('fundo2.jpg');
@@ -206,3 +211,185 @@
 }
 
     
+=======
+    
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .sobrenos {
+        font-family: "Alumni Sans SC", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+    }
+    
+    #mainHeader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.394);
+    }
+    
+    #mainNav {
+        height: 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    #mainNav>#logoman {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: blueviolet;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-left: 30px;
+    }
+    
+    #mainNav>#nomes {
+        display: flex;
+    }
+    
+    #logoHeader {
+        width: 70px;
+    }
+    
+    #divLista {
+        display: flex;
+        margin-right: 2rem;
+    }
+    
+    .listaNav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        list-style: none;
+    }
+    
+    .listaNav>li {
+        color: white;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        height: 3rem;
+    }
+    
+    .textoSobre {
+        font-family: "Alumni Sans SC", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 40px;
+    }
+    
+    .listaNav li:last-of-type {
+        margin-right: 0px;
+    }
+    
+    .input-container {
+        position: relative;
+        width: 100%;
+    }
+    
+    .input-container>input {
+        height: 1.2rem;
+        width: 17rem;
+        padding: 1.1rem;
+        border-radius: 20px;
+        position: relative;
+        background-color: black;
+        outline: none;
+        color: white;
+    }
+    
+    #searchPlaceholder {
+        color: white;
+        position: absolute;
+        left: 15px;
+        top: 5px;
+        height: 1.2rem;
+        width: 15rem;
+        user-select: none;
+        pointer-events: none;
+        font-size: 16px;
+        color: grey;
+        transition: 0.5s;
+    }
+    
+    #searchInput:focus {
+        border: 2px solid blueviolet
+    }
+    
+    #searchInput:focus+#searchPlaceholder {
+        display: none;
+    }
+    
+    .listaNav>li>.input-container>img {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        transform: translateY(-50%);
+        right: -20px;
+        top: 50%;
+        border-radius: 20px;
+        background-color: black;
+    }
+    
+    .wrapper {
+        margin-left: 50px;
+        margin-top: 12%;
+    }
+    
+    .wrapper>h1 {
+        color: white;
+    }
+    
+    .textoSobre {
+        color: white;
+    }
+    
+    .divTexto {
+        background-color: none;
+    }
+    
+    .divTexto>h1 {
+        color: white;
+        font-weight: bold;
+    }
+    
+    #searchPlaceholder {
+        display: flex;
+        justify-content: end;
+    }
+    
+    #pesquisarLupa {
+        filter: drop-shadow(2px 4px 6px rgba(255, 255, 255, 0.7));
+    }
+    
+    #carrinho {
+        filter: drop-shadow(2px 4px 6px rgba(255, 255, 255, 0.7));
+    }
+    /*
+- cabeçalho
+    -imagens (icons)
+    -logo brilhinhos bonitos
+    -arrumar a barra de pesquisa
+    -mudar a fonte
+
+- main
+    -alinhar o texto
+    -deixar a fonte bonita
+
+- area de jogos
+    -mostar os jogos em uma roll
+    -criar a função da seta 
+    -imagens
+*/
+>>>>>>> e795a8abfafeaf13025866c1b1cc1226811064c3
