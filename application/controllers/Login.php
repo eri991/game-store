@@ -27,18 +27,15 @@ class Login extends CI_Controller {
             $identificador = $this->input->post('identificador');
             $senha = $this->input->post('senha');
 
-           
-            $usuario = $this->Cadastro_model->buscar_por_email_ou_nickname($identificador);
+            /*$usuario = $this->Cadastro_model->buscar_por_email_ou_nickname($identificador);
 
             if ($usuario && $usuario->senha == $senha) {
-               
                 $this->session->set_userdata('usuario_logado', $usuario);
-                $this->load->view('telainicial');
+                redirect('telainicial');
             } else {
-               
                 $data['erro_login'] = 'Email/Nickname ou senha incorretos';
                 $this->load->view('login', $data);
-            }
+            }*/
         }
     }
 }
