@@ -49,10 +49,10 @@
     <footer class="menu-jogos">
         <ul>
         <li><img src="assets/img/Bloodborne.jpg" alt="Bloodborne"></li>
-        <li><img src="assets/img/Bloodborne.jpg" alt="Dark Souls"></li>
-        <li><img src="assets/img/Bloodborne.jpg" alt="Fortnite"></li>
-        <li><img src="assets/img/Bloodborne.jpg" alt="Call of Duty"></li>
-        <li><img src="assets/img/Bloodborne.jpg" alt="Batman"></li>
+        <li><img src="assets/img/dark_souls.avif" alt="Dark Souls"></li>
+        <li><img src="assets/img/Fortnite.jpg" alt="Fortnite"></li>
+        <li><img src="assets/img/callofduty.avif" alt="Call of Duty"></li>
+        <li><img src="assets/img/batman.avif" alt="Batman"></li>
         </ul>
   </footer>
 </body>
