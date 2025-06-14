@@ -28,7 +28,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.394);
     }
     
     #mainNav {
@@ -170,41 +169,65 @@
     #carrinho {
         filter: drop-shadow(2px 4px 6px rgba(255, 255, 255, 0.7));
     }
-.menu-jogos{
-    margin-left: 25Px;
-    margin-top: 3%;
-}
-    .menu-jogos ul {
-  display: flex;
-  flex-direction: row; 
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  
-}
-
-.menu-jogos li {
-  margin-left: -60px; /* sobreposição lateral */
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s, z-index 0.3s;
-}
-
-.menu-jogos li:first-child {
-  margin-left: 0; /* evita margem negativa no primeiro */
-}
-
-.menu-jogos img {
-   width: 300px; /* Aumenta o tamanho da imagem */
-  height: 200px; /* Altura proporcional ao visual da imagem enviada */
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-  object-fit: cover;
-}
-
-.menu-jogos li:hover {
-  transform: scale(1.1);
-  z-index: 10; /* traz para frente ao passar o mouse */
-}
-
     
+.menu-jogos{
+margin-left: 5%;
+  margin-top:3%;
+}
+.menu-jogos ul{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+/* ======= CARTÕES ======= */
+.menu-jogos li{
+  position:relative;
+}
+.menu-jogos li+li{
+  margin-left:-120px; /* quanto mais negativo, mais “entra” */
+}
+
+
+.menu-jogos img{
+  width:350px;
+  height:200px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 0 15px rgba(0,0,0,.6);
+  display:block;
+}
+
+/* ======= IMAGENS ======= */
+.menu-jogos .img1,
+.menu-jogos .img5{
+  transform:scale(.8);
+  z-index:1;
+}
+
+.menu-jogos .img2,
+.menu-jogos .img4{
+  transform:scale(.9);
+  z-index:2;
+}
+
+
+.menu-jogos .img3{
+  transform:scale(1);
+  z-index:3;
+}
+
+
+.menu-jogos li{
+  transition:transform .4s ease, z-index .2s;
+  transform-origin:center center;
+}
+.menu-jogos li:hover{
+  transform:scale(1.1) translateY(-8px);
+  z-index:10;
+}
+  
+

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body style="background-image: url('<?php echo base_url('assets/img/fundo2.png')?>') ">
+<body style="background-image: url('<?php echo base_url('assets/img/fundo (1).jpg')?>') ">
 
 	<header id='mainHeader'>
 		<nav id= 'mainNav'>
@@ -48,11 +48,11 @@
 
     <footer class="menu-jogos">
         <ul>
-        <li><img src="assets/img/Bloodborne.jpg" alt="Bloodborne"></li>
-        <li><img src="assets/img/dark_souls.avif" alt="Dark Souls"></li>
-        <li><img src="assets/img/Fortnite.jpg" alt="Fortnite"></li>
-        <li><img src="assets/img/callofduty.avif" alt="Call of Duty"></li>
-        <li><img src="assets/img/batman.avif" alt="Batman"></li>
+        <li class = "img1"><img src="assets/img/Bloodborne.jpg" alt="Bloodborne"></li>
+        <li class = "img2"><img src="assets/img/dark_souls.avif" alt="Dark Souls"></li>
+        <li class = "img3"><img src="assets/img/Fortnite.jpg" alt="Fortnite"></li>
+        <li class = "img4"><img src="assets/img/callofduty.avif" alt="Call of Duty"></li>
+        <li class = "img5"><img src="assets/img/batman.avif" alt="Batman"></li>
         </ul>
   </footer>
 </body>
