@@ -9,6 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body style="background-image: url('<?php echo base_url('assets/img/fundo (1).jpg')?>') ">
+    <div class="pyramid-loader">
+    <div class="wrapper1">
+        <span class="side side1"></span>
+        <span class="side side2"></span>
+        <span class="side side3"></span>
+        <span class="side side4"></span>
+        <span class="shadow"></span>
+    </div>  
+</div>
 
 	<header id='mainHeader'>
 		<nav id= 'mainNav'>
@@ -37,7 +46,7 @@
 	</header>
     <main class="wrapper">
         <div class="divTexto">
-            <h1 class="sobrenos"><b>SOBRE NÓS</b></h1>    
+            <h1 class="sobrenos">SOBRE NÓS</h1>    
             <h3 class="textoSobre">
                 Lorem, ipsum dolor sit amet consectetur <br>
                 adipisicing elit. Nemo consectetur quam, quaerat cupiditate qui rerum totam odio? <br>
@@ -55,5 +64,16 @@
         <li class = "img5"><img src="assets/img/batman.avif" alt="Batman"></li>
         </ul>
   </footer>
+
+  <script>
+    let elem_loading = document.querySelector('.pyramid-loader');
+    let elem_wrapper1 = document.querySelector('.wraper1');
+    console.log("ok");
+
+    setTimeout(function(){
+        elem_loading.classList.remove('pyramid-loader');
+        elem_wraper1.classList.remove('wraper1');
+    }, 1280)
+  </script>
 </body>
 </html>
