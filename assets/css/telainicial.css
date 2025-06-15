@@ -1,4 +1,4 @@
-  * {
+ * {
         padding: 0px;
         margin: 0px;
         border: 0px;
@@ -285,7 +285,6 @@ margin-left: 5%;
   100% {transform:rotateY(360deg);}
 }
 
-
 .pyramid-loader .wrapper1 .side {
   width: 70px;
   height: 70px;
@@ -333,3 +332,4 @@ margin-left: 5%;
   transform: rotateX(90deg) translateZ(-40px);
   filter: blur(12px);
 }
+
