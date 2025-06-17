@@ -52,6 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['jogo/(:num)'] = 'jogo/index/$1';
 
-$route['default_controller'] = 'cadastro';
+$route['default_controller'] = 'telainicial';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
