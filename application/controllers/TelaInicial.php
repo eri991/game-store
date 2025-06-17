@@ -8,4 +8,5 @@ class TelaInicial extends CI_Controller
     {
         $this->load->view('telainicial');
     }
+
 }

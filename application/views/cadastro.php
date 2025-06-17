@@ -4,7 +4,7 @@
 <head>
 	<title>G-Max</title>
 	<link rel="icon" href="<?php echo base_url('assets/img/icon_Gmax.ico'); ?>" type="image/x-icon">
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/loginPage.css')?> ?v=<?= time() ?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/cadastroPage.css')?> ?v=<?= time() ?>">
 </head>
 <script type="text/javascript">
 	function mostrar() {

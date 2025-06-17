@@ -16,6 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  margin-bottom: 2rem;
 }
 
 #mainNav {
@@ -68,14 +69,12 @@ body {
     height: 80dvh;
     padding-inline: 15%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-direction: row;
     color: white;
 }
 .listaProdutos {
     width: 60%;
-    
 }
 
 .linhaProduto {

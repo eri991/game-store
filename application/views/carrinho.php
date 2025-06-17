@@ -79,10 +79,10 @@
         </div>
     </div>
 </main>
-<script>
-    function mudarQnt(id_item, delta) {
-        window.location.href = '<?= base_url("carrinho/mudarQuantidade") ?>/' + id_item + '/' + delta;
-    }
+    <script>
+        function mudarQnt(id_item, delta) {
+            window.location.href = '<?= base_url("carrinho/mudarQuantidade") ?>/' + id_item + '/' + delta;
+        }
     </script>
 </body>
 </html>

@@ -79,6 +79,7 @@ class Cadastro extends CI_Controller {
             $pais = $this->input->post('pais');
             $data_nasc = $this->input->post('dataNasc');
             $senha = $this->input->post('senha');
+            $conf_senha = $this->input->post('confSenha');
 
             $dados = array(
                 'nome_completo' => $nome_completo,
@@ -88,9 +89,8 @@ class Cadastro extends CI_Controller {
                 'data_nasc' => $data_nasc,
                 'senha' => $senha,
             );
-               $this->db->insert('usuarios', $dados);
-
-             $this->load->view('telainicial');
+            $this->db->insert('usuarios', $dados);
+            $this->load->view('telainicial');
         }
     }
 }
