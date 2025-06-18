@@ -11,10 +11,8 @@
 		checkbox = document.getElementById('checkboxMostrarSenha');
 		if(checkbox.checked){
 			document.getElementById('senha').type = 'text'
-			document.getElementById('confSenha').type = 'text'
 		} else {
 			document.getElementById('senha').type = 'password'
-			document.getElementById('confSenha').type = 'password'
 		}
 	}
 </script>
@@ -22,7 +20,7 @@
 	<header id='mainHeader'>
 		<nav id='mainNav'>
 			<div>
-				<img id='logoHeader' src="<?php echo base_url('assets/img/icon_Gmax.ico') ?>" alt="Logo">
+				<a href="<?php echo base_url('telainicial')?>"><img id='logoHeader' src="<?php echo base_url('assets/img/icon_Gmax.ico') ?>" alt="Logo"></a>
 				<p>Cadastrar</p>
 			</div>
 			<a href="" target="_blank">Precisa de ajuda?</a>
@@ -266,6 +264,9 @@
 					<input type="password" name="confSenha" id="confSenha" class="inputsCad" placeholder=" " value="<?= set_value('confSenha')?>">
 					<label for="confSenha">Confirmar Senha</label>
 					<?= form_error('confSenha','<div class="erroMsg">','</div>');?>
+				</div>
+				<div class="inputContainer" id="link">
+					<a href="<?php echo base_url('login')?>">Já tem conta? Faça Login</a>
 				</div>
 				<label id="mostrarSenha">
 					<input type="checkbox" name="mostrarSenha" id="checkboxMostrarSenha" onclick="mostrar()">

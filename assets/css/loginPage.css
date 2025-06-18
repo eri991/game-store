@@ -5,16 +5,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #0f0f0f, #1a001a, #32004a, #4b0082);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-}
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  background-color: black;
 }
 
 #mainHeader {
@@ -45,10 +36,11 @@ body {
   gap: 10px;
 }
 
-#mainNav > div > p {
+#mainNav>div>p {
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: blueviolet;
   font-weight: bold;
-  font-size: 20px;
 }
 
 #mainNav > a {
@@ -87,15 +79,19 @@ form h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .inputContainer {
   position: relative;
-  margin-bottom: 1.5rem;
+  height: 3.5rem;
+  margin-bottom: 0.1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
 }
 
 .inputsCad {
-  width: 100%;
+  width: 28rem;
   height: 40px;
   padding: 10px;
   font-size: 1rem;
@@ -112,8 +108,8 @@ form h2 {
 
 .inputContainer label {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 8px;
+  left: 10px;
   color: grey;
   background-color: black;
   transition: 0.2s;
@@ -143,19 +139,14 @@ form h2 {
   padding-left: 5px;
   margin-top: 3px;
 }
-
-#linkCadastro {
-  color: blueviolet;
-  font-weight: bold;
+#link{
+  height: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#link > a{
   text-decoration: none;
-  transition: 200ms;
 }
-
-#linkCadastro:hover {
-  color: white;
-  text-decoration: underline;
-}
-
 #mostrarSenha {
   display: flex;
   align-items: center;
@@ -163,6 +154,7 @@ form h2 {
   color: grey;
   cursor: pointer;
   user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #mostrarSenha input {
@@ -199,14 +191,13 @@ form h2 {
 }
 
 #sideSpaceBackground {
-  width: 50%;
-  min-width: 500px;
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% auto;
 }
 
 #sideSpaceBackground img {
