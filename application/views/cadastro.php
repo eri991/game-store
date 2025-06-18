@@ -29,7 +29,6 @@
 	<main id="wrapper">
 		<section id="sideLogin">
 			<form action="" id="cadForm" autocomplete="off" method="post" onsubmit="return formValidation()">
-				<h2>Cadastrar</h2>
 				<div class="inputContainer <?= form_error('nomeCompleto') ? 'input-error':'' ?>" >
 					<input type="text" name="nomeCompleto" id="nomeCompleto" name="nomeCompleto" class="inputsCad" placeholder=" " value="<?= set_value('nomeCompleto') ?>">
 					<label for="nomeCompleto">Nome Completo</label>

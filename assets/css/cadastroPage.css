@@ -9,7 +9,7 @@ body {
 }
 #mainHeader {
   background-color: black;
-  height: 80px;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +32,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  filter: none;
+  box-shadow: none;
 }
 #mainNav>div>p {
   font-size: 20px;
@@ -72,7 +74,8 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 999;
-  box-shadow: 20px 0px 100px black;
+  box-shadow: 20px 100px 100px black;
+  margin-top: 1rem;
 }
 #cadForm>h2 {
   font-size: 2rem;
@@ -187,7 +190,7 @@ body {
   background-color: blueviolet;
 }
 .input-error {
-  margin-bottom: .1rem;
+  margin-bottom: .4rem;
 }
 
 .input-error input {
@@ -208,7 +211,6 @@ body {
   font-size: 12px;
   min-height: 8px;
 }
-
 #sideSpaceBackground {
   width: 45%;
   display: flex;

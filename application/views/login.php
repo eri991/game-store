@@ -30,10 +30,11 @@
         <section id="formSection">
             <form action="<?= base_url('login') ?>" method="post">
                 <h2>Login</h2>
-                <div class="inputContainer">
-                    <input type="text" name="identificador" id="identificador" class= "inputsCad" placeholder=" " value="<?= set_value('identificador') ?>">
-                    <label for="identificador">Email ou Nickname</label>
-                    <?= form_error('identificador') ?>
+                <div class="inputContainer"<?php form_error('emailornickname')? 'input-error':''?>>
+                    <input type="text" name="emailornicknaem" id="emailornickname" class= "inputsCad" placeholder=" " value="<?= set_value('emailornickname') ?>">
+                    <label for="emailornickname">Email ou Nickname</label>
+                    <?= form_error('emailornickname') ?>
+                    <?php form_error('emailornickname','<div class= "erroMsg">','</div>')?>
                 </div>
                 <div class="inputContainer">
                     <input type="password" name="senha" id="senha" placeholder=" " class="inputsCad">
@@ -41,7 +42,7 @@
                     <?= form_error('senha') ?>
                 </div>
                 <?php if (isset($erro_login)): ?>
-                    <div style="color:red"><?= $erro_login ?></div>
+                    <div ><?= $erro_login ?></div>
                 <?php endif; ?>
                 <div class="inputContainer" id="link">
 					<a href="<?php echo base_url('cadastro')?>">Não tem conta? Cadastre-se</a>

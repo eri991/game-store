@@ -12,7 +12,7 @@ class Login extends CI_Controller {
 
     public function index()
     {
-        $this->form_validation->set_rules('identificador', 'Email ou Nickname', 'required',
+        $this->form_validation->set_rules('emailornickname', 'Email ou Nickname', 'required',
         array(
             'required' => 'Digite seu email ou nickname'
         ));
