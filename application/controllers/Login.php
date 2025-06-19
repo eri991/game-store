@@ -7,28 +7,12 @@ class Login extends CI_Controller {
     {
         parent::__construct();
         $this->load->library('form_validation');
-        $this->load->model('Cadastro_model'); 
-    }
-    public function validar_nickname($nickname){
-        $this->load->model('Login_model');
-        if(!$this->Login_model->buscar_nickname($nickname)){
-            $this->form_validation->set_message('validar_nickname','Insira um usuário válido');
-            return FALSE;
-        }
-        return TRUE;
-    }
-    public function validar_senha($nickname,$senha){
-        $this->load->model('Login_model');
-        if(!$this->Login_model->buscar_senha($nickname,$senha)){
-            $this->form_validation->set_message('validar_senha','Senha incorreta');
-            return FALSE;
-        } else{
-            return TRUE;
-        }
+        $this->load->model('Login_model'); 
+        $this->load->library('session');
     }
     public function index()
     {
-        $this->form_validation->set_rules('nickname', 'Nickname', 'required|callback_validar_nickname',
+        $this->form_validation->set_rules('nickname', 'Nickname', 'required',
         array(
             'required' => 'Digite seu email ou nickname'
         ));
@@ -37,10 +21,16 @@ class Login extends CI_Controller {
             'required' => 'Digite sua senha'
         ));
         if ($this->form_validation->run() === FALSE) {
-        $this->load->view('login'); // exibe o formulário novamente
+            $this->load->view('login'); // exibe o formulário novamente
         } else {
-        // autenticar o usuário
-        redirect('telainicial');
-    }
+            $nickname = $this->input->post('nickname');
+            $senha = $this->input->post('senha');
+            if($this->Login_model->buscar_senha($nickname,$senha)){
+                redirect('telainicial');
+            }else{
+                $this->session->set_flashdata('erro-login', 'Usuário e/ou senha incorretos');
+                redirect('login');
+            }
+        } // autenticar o usuário 
     }
 }

@@ -29,19 +29,25 @@
     <main id="wrapper">
         <section id="formSection">
             <form action="<?= base_url('login') ?>" method="post">
-                <h2>Login</h2>
-                <div class="inputContainer"<?= form_error('nickname')? 'input-error':''?>>
+                <div class="inputContainer <?= form_error('senha')? 'input-error':''?> <?= $this->session->flashdata('erro-login')? 'input-error':''?>">
                     <input type="text" name="nickname" id="nickname" class= "inputsCad" placeholder=" " value="<?= set_value('nickname') ?>">
                     <label for="nickname">Nickname</label>
-                    <?php form_error('nickname','<div class= "erroMsg">','</div>')?>
+                    <?= form_error('nickname','<div class="error-message">','</div>');?>
                 </div>
-                <div class="inputContainer">
+                <div class="inputContainer <?= form_error('senha')? 'input-error':''?> <?= $this->session->flashdata('erro-login')?'input-error':''?>">
                     <input type="password" name="senha" id="senha" placeholder=" " class="inputsCad">
                     <label for="senha">Senha</label>
-                    <?= form_error('senha') ?>
+                    <?= form_error('senha','<div>','</div>');?>
                 </div>
-                <?php if (isset($erro_login)): ?>
-                    <div ><?= $erro_login ?></div>
+                <?php if($this->session->flashdata('empty-error')):?>
+                    <div class='error-message'>
+                        <?= $this->session->flashdata('rmpty-error');?>
+                    </div>
+                <?php endif; ?>
+                <?php if($this->session->flashdata('erro-login')):?>
+                    <div class='error-message'>
+                        <?= $this->session->flashdata('erro-login');?>
+                    </div>
                 <?php endif; ?>
                 <div class="inputContainer" id="link">
 					<a href="<?php echo base_url('cadastro')?>">Não tem conta? Cadastre-se</a>
@@ -59,8 +65,7 @@
 
         <section id="sideSpaceBackground" style="background-image: 
         radial-gradient(circle, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%),
-        url('<?php echo base_url("assets/img/fundo_estelar.jpg"); ?>');">
-            <img src="<?php echo base_url('assets/img/jinx.png'); ?>" alt="Jinx">
+        url('<?php echo base_url("assets/img/fundo_jinx.png"); ?>');">
         </section>
     </main>
 </body>

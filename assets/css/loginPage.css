@@ -10,7 +10,7 @@ body {
 
 #mainHeader {
   background-color: black;
-  height: 80px;
+  height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,6 +47,7 @@ body {
   color: blueviolet;
   font-size: 16px;
   text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #mainNav > a:hover {
@@ -84,7 +85,7 @@ form h2 {
 
 .inputContainer {
   position: relative;
-  height: 3.5rem;
+  height: 4rem;
   margin-bottom: 0.1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
@@ -134,10 +135,20 @@ form h2 {
 }
 
 .error-message {
+  height: 2rem;
   color: red;
-  font-size: 0.8rem;
-  padding-left: 5px;
-  margin-top: 3px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.inputContainer div{
+  color: red;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  min-height: 8px;
+  margin-top: 0.1rem;
 }
 #link{
   height: 1.5rem;
@@ -191,18 +202,16 @@ form h2 {
 }
 
 #sideSpaceBackground {
-  width: 45%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
-}
-
-#sideSpaceBackground img {
-  height: 30rem;
-  filter: drop-shadow(-5px 5px 5px blueviolet);
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 40%);
-  mask-image: linear-gradient(to top, transparent 0%, black 40%);
+  -webkit-mask-image: radial-gradient(circle at center, black 70%, transparent 100%);
+    mask-image: radial-gradient(circle at center, black 70%, transparent 100%);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
 }

@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  border: 0;
   box-sizing: border-box;
 }
 body {
@@ -9,7 +8,7 @@ body {
 }
 #mainHeader {
   background-color: black;
-  height: 4rem;
+  height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,8 +31,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  filter: none;
-  box-shadow: none;
+  gap: 10px;
 }
 #mainNav>div>p {
   font-size: 20px;
@@ -57,25 +55,22 @@ body {
 }
 #wrapper {
   display: flex;
-  flex-direction: row;
   width: 100%;
-  max-width: 1400px;
-  margin: auto;
-  flex-wrap: wrap;
-}
-#sideLogin,
-#sideSpaceBackground {
-  width: 50%;
-  min-width: 500px;
-  height: auto;
+  min-height: calc(100vh - 5rem);
 }
 #sideLogin {
+  width: 50%;
+  min-width: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
   box-shadow: 20px 100px 100px black;
-  margin-top: 1rem;
+}
+#cadForm{
+  width: 80%;
+  max-width: 500px;
+  padding: 2rem;
+  color: blueviolet;
 }
 #cadForm>h2 {
   font-size: 2rem;
@@ -85,7 +80,6 @@ body {
 }
 .inputContainer {
   width: 28rem;
-  margin-bottom: 0.1rem;
   height: 3.5rem;
   padding: 10px;
   display: flex;
@@ -211,19 +205,18 @@ body {
   font-size: 12px;
   min-height: 8px;
 }
+
 #sideSpaceBackground {
-  width: 45%;
+  width: 50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
-}
-
-#sideSpaceBackground>img {
-  height: 30rem;
-  filter: drop-shadow(-5px 5px 5px blueviolet);
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 40%);
-  mask-image: linear-gradient(to top, transparent 0%, black 40%);
+  -webkit-mask-image: radial-gradient(circle at center, black 70%, transparent 100%);
+    mask-image: radial-gradient(circle at center, black 70%, transparent 100%);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
 }

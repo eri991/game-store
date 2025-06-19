@@ -11,8 +11,10 @@
 		checkbox = document.getElementById('checkboxMostrarSenha');
 		if(checkbox.checked){
 			document.getElementById('senha').type = 'text'
+			document.getElementById('confSenha').type = 'text'
 		} else {
 			document.getElementById('senha').type = 'password'
+			document.getElementById('confSenha').type = 'password'
 		}
 	}
 </script>
@@ -278,9 +280,10 @@
 			</form>
 		</section>
 		<section id="sideSpaceBackground"
-			style="background-image: url(<?php echo base_url("assets/img/fundo_estelar.jpg") ?>);">
-			<img src='<?php echo base_url('assets/img/jinx.png') ?>' alt="Jinx">
-		gction>
+			style="background-image: 
+        radial-gradient(circle, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%),
+        url('<?php echo base_url("assets/img/fundo_jinx.png"); ?>');">
+		<section>
 	</main>
 </body>
 
