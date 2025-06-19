@@ -9,10 +9,26 @@ class Login extends CI_Controller {
         $this->load->library('form_validation');
         $this->load->model('Cadastro_model'); 
     }
-
+    public function validar_nickname($nickname){
+        $this->load->model('Login_model');
+        if(!$this->Login_model->buscar_nickname($nickname)){
+            $this->form_validation->set_message('validar_nickname','Insira um usuário válido');
+            return FALSE;
+        }
+        return TRUE;
+    }
+    public function validar_senha($nickname,$senha){
+        $this->load->model('Login_model');
+        if(!$this->Login_model->buscar_senha($nickname,$senha)){
+            $this->form_validation->set_message('validar_senha','Senha incorreta');
+            return FALSE;
+        } else{
+            return TRUE;
+        }
+    }
     public function index()
     {
-        $this->form_validation->set_rules('emailornickname', 'Email ou Nickname', 'required',
+        $this->form_validation->set_rules('nickname', 'Nickname', 'required|callback_validar_nickname',
         array(
             'required' => 'Digite seu email ou nickname'
         ));
@@ -20,25 +36,11 @@ class Login extends CI_Controller {
         array(
             'required' => 'Digite sua senha'
         ));
-
-        if ($this->form_validation->run() == FALSE) {
-            $this->load->view('login'); 
+        if ($this->form_validation->run() === FALSE) {
+        $this->load->view('login'); // exibe o formulário novamente
         } else {
-            $identificador = $this->input->post('identificador');
-            $senha = $this->input->post('senha');
-
-           
-            $usuario = $this->Cadastro_model->buscar_por_email_ou_nickname($identificador);
-
-            if ($usuario && $usuario->senha == $senha) {
-               
-                $this->session->set_userdata('usuario_logado', $usuario);
-                $this->load->view('telainicial');
-            } else {
-               
-                $data['erro_login'] = 'Email/Nickname ou senha incorretos';
-                $this->load->view('login', $data);
-            }
-        }
+        // autenticar o usuário
+        redirect('telainicial');
+    }
     }
 }

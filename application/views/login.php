@@ -30,11 +30,10 @@
         <section id="formSection">
             <form action="<?= base_url('login') ?>" method="post">
                 <h2>Login</h2>
-                <div class="inputContainer"<?php form_error('emailornickname')? 'input-error':''?>>
-                    <input type="text" name="emailornicknaem" id="emailornickname" class= "inputsCad" placeholder=" " value="<?= set_value('emailornickname') ?>">
-                    <label for="emailornickname">Email ou Nickname</label>
-                    <?= form_error('emailornickname') ?>
-                    <?php form_error('emailornickname','<div class= "erroMsg">','</div>')?>
+                <div class="inputContainer"<?= form_error('nickname')? 'input-error':''?>>
+                    <input type="text" name="nickname" id="nickname" class= "inputsCad" placeholder=" " value="<?= set_value('nickname') ?>">
+                    <label for="nickname">Nickname</label>
+                    <?php form_error('nickname','<div class= "erroMsg">','</div>')?>
                 </div>
                 <div class="inputContainer">
                     <input type="password" name="senha" id="senha" placeholder=" " class="inputsCad">

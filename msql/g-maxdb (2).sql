@@ -23,7 +23,7 @@ SET NAMES utf8mb4;
 CREATE TABLE `biblioteca` (
   `id_jogo` INT NOT NULL,
   `id_usuario` INT NOT NULL,
-  `data_compra` DATE DEFAULT CURRENT_TIMESTAMP
+  `data_compra` DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Table: carrinho

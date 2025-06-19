@@ -1,27 +1,19 @@
 <?php
-
-class Login_model extends CI_Model {
-
-    // Verifica se existe um usuário com aquele nickname ou email, e retorna o registro se encontrar
-    public function buscar_usuario($identificador) {
-        $this->db->where('email', $identificador);
-        $this->db->or_where('nickname', $identificador);
-        $query = $this->db->get('usuarios');
-
-        if ($query->num_rows() == 1) {
-            return $query->row(); // retorna o objeto do usuário
-        }
-        return null;
+Class Login_model extends CI_Model{
+    function buscar_nickname($nickname){
+        $query = $this->db->get_where('usuario',['nickname' => $nickname]);
+        return $query->num_rows() > 0;
     }
-
-    // Verifica se a senha confere com a do usuário encontrado
-    public function verificar_login($identificador, $senha) {
-        $usuario = $this->buscar_usuario($identificador);
-        
-        if ($usuario && $usuario->senha === $senha) {  // Se quiser usar hash futuramente, troque por password_verify
-            return $usuario;
+    function buscar_senha($nickname,$senha){
+        $query = $this->db->get_where('usuario',['nickname' => $nickname]);
+        if($query->num_rows() > 0){
+            if($query->row()->senha == $senha){
+                return true;
+            }else{
+                return false;
+            }
+            return false;
         }
 
-        return null;
     }
 }
