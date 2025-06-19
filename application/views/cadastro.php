@@ -7,6 +7,12 @@
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/cadastroPage.css')?> ?v=<?= time() ?>">
 </head>
 <script type="text/javascript">
+	function anularNumeros(e){
+		const key = e.key;
+		if(key >= '0' && key <= '9'){
+			e.preventDefault();
+		};
+	}
 	function mostrar() {
 		checkbox = document.getElementById('checkboxMostrarSenha');
 		if(checkbox.checked){
@@ -32,7 +38,7 @@
 		<section id="sideLogin">
 			<form action="" id="cadForm" autocomplete="off" method="post" onsubmit="return formValidation()">
 				<div class="inputContainer <?= form_error('nomeCompleto') ? 'input-error':'' ?>" >
-					<input type="text" name="nomeCompleto" id="nomeCompleto" name="nomeCompleto" class="inputsCad" placeholder=" " value="<?= set_value('nomeCompleto') ?>">
+					<input type="text" name="nomeCompleto" id="nomeCompleto"  class="inputsCad" onkeydown="anularNumeros(event)" placeholder=" " value="<?= set_value('nomeCompleto') ?>">
 					<label for="nomeCompleto">Nome Completo</label>
 					<?= form_error('nomeCompleto','<div class="erroMsg">','</div>');?>
 				</div>
