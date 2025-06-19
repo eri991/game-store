@@ -6,7 +6,6 @@ Class Login_model extends CI_Model{
             if($query->row()->senha == $senha){
                 return true;
             }
-            return false;
         }
 
     }

@@ -9,15 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body style="background-image: url('<?php echo base_url('assets/img/fundo (1).jpg')?>') ">
-    <div class="pyramid-loader">
-    <div class="wrapper1">
-        <span class="side side1"></span>
-        <span class="side side2"></span>
-        <span class="side side3"></span>
-        <span class="side side4"></span>
-        <span class="shadow"></span>
-    </div>  
-</div>
 
 	<header id='mainHeader'>
 		<nav id= 'mainNav'>
@@ -44,6 +35,63 @@
             </div>
 		</nav>
 	</header>
+
+    <div class="slider">
+
+        <div class="slides">
+            <!-- radio buttons -->
+             <input type="radio" name="radio-btn" id="radio1" >
+             <input type="radio" name="radio-btn" id="radio2">
+             <input type="radio" name="radio-btn" id="radio3">
+             <input type="radio" name="radio-btn" id="radio4">
+
+             <!-- sildes imagens -->
+            <div class="slide first">
+                <img src="assets/img/dead_by_daylight.png" alt="img1">
+            </div>
+            <div class="slide">
+                <img src="assets/img/dead_by_daylight.png" alt="img2">
+            </div>
+            <div class="slide">
+                <img src="assets/img/dead_by_daylight.png" alt="img3">
+            </div>
+            <div class="slide">
+                <img src="assets/img/dead_by_daylight.png" alt="img4">
+            </div>
+
+            <!-- automatic navigation -->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+        
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <main class="wrapper">
         <div class="divTexto">
             <h1 class="sobrenos">SOBRE NÓS</h1>    
@@ -66,14 +114,21 @@
   </footer>
 
   <script>
-    let elem_loading = document.querySelector('.pyramid-loader');
-    let elem_wrapper1 = document.querySelector('.wraper1');
-    console.log("ok");
+    let count = 1;
+    document.getElementById("radio1").checked = true;
+    
+    setInterval(function(){
+        nextImage();
+    }, 2000);
 
-    setTimeout(function(){
-        elem_loading.classList.remove('pyramid-loader');
-        elem_wraper1.classList.remove('wraper1');
-    }, 1280)
+    function nextImage(){
+        count++;
+        if(count > 4){
+            count = 1;
+        }
+        document.getElementById("radio"+count).checked = true;
+    }
   </script>
+
 </body>
 </html>
