@@ -287,7 +287,7 @@
 		</section>
 		<section id="sideSpaceBackground"
 			style="background-image: 
-        radial-gradient(circle, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%),
+        radial-gradient(circle, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%),
         url('<?php echo base_url("assets/img/fundo_jinx.png"); ?>');">
 		<section>
 	</main>

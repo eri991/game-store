@@ -75,23 +75,6 @@
             <label for="radio4" class="manual-btn"></label>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <main class="wrapper">
         <div class="divTexto">
             <h1 class="sobrenos">SOBRE NÓS</h1>    
