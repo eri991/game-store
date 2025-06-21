@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body style="background-image: url('<?php echo base_url('assets/img/fundo (1).jpg')?>') ">
+<body>
 
 	<header id='mainHeader'>
 		<nav id= 'mainNav'>
@@ -36,6 +36,7 @@
 		</nav>
 	</header>
 
+    <!-- SLIDER -->
     <div class="slider">
 
         <div class="slides">
@@ -75,7 +76,66 @@
             <label for="radio4" class="manual-btn"></label>
         </div>
     </div>
-    <main class="wrapper">
+<!-- FIM SLIDER -->]
+
+
+<!-- primeiro carrosel -->
+ <div class="carrosel-container">
+    <h2>DESCUBRA UM ESTILO NOVO</h2>
+
+    <div class="botoes-navegacao">
+      <button class="botao-seta" onclick="scrollCarousel(-1)">&#x276E;</button>
+      <button class="botao-seta" onclick="scrollCarousel(1)">&#x276F;</button>
+    </div>
+
+    <div class="carrosel-imagens" id="carrossel">
+      <div class= "img1">
+        <img src="assets/img/jogo1.webp" alt="Imagem 1">
+        <p class= "texto-img">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+        </div>
+      <div>
+        <img src="assets/img/jogo2.webp" alt="Imagem 2">
+        <p class= "texto-img">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    <div>
+        <img src="assets/img/jogo3.jpg" alt="Imagem 3">
+        <p class= "texto-img">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    <div>
+      <img src="assets/img/jogo4.jpeg" alt="Imagem 4">
+      <p class= "texto-img">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    <div>
+      <img src="assets/img/jogo5.jpg" alt="Imagem 5">
+      <p class= "texto-img">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    </div>
+    
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="all" style = "background-image: url('<?php echo base_url('assets/img/fundo (1).jpg')?>')">
+    <main class="wrapper" >
         <div class="divTexto">
             <h1 class="sobrenos">SOBRE NÓS</h1>    
             <h3 class="textoSobre">
@@ -95,8 +155,14 @@
         <li class = "img5"><img src="assets/img/batman.avif" alt="Batman"></li>
         </ul>
   </footer>
-
+</div>
   <script>
+    // Carrossel de imagens
+     function scrollCarousel(direction) {
+      const carrossel = document.getElementById('carrossel');
+      const scrollAmount = 270; // valor ajustável conforme o tamanho da imagem
+      carrossel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
     let count = 1;
     document.getElementById("radio1").checked = true;
     
