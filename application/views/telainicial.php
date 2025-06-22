@@ -181,7 +181,7 @@
 
   <!-- quarto carrosel -->
    <div class="carrosel-container4">
-    <h2>PRINCIPAIS NOVOS LANÇAMENTOS</h2>
+    <h2>CATEGORIAS</h2>
     <div class="botoes-navegacao4">
       <button class="botao-seta4" onclick="scrollCarousel4(-1)">&#x276E;</button>
       <button class="botao-seta4" onclick="scrollCarousel4(1)">&#x276F;</button>
