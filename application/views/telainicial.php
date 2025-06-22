@@ -18,7 +18,8 @@
 			</div>
             <div id="divLista">
                 <ul class="listaNav">
-                    <li>Início</li>
+                  <a href="<?php echo base_url('cadastro'); ?>" class="cadastre-link">CADASTRE-SE </a>
+                    <li>INÍCIO</li>
                     <li>
                         <div class="input-container">
                             <input id="searchInput" type="search" placeholder="Pesquisar">
@@ -94,20 +95,20 @@
         <p class= "texto-img">Blades of Fire <br> r$ 150,00 <br> jogo base</p>
         </div>
       <div>
-        <img src="assets/img/jogo2.webp" alt="Imagem 2">
+        <img src="assets/img/garou.jpg" alt="Imagem 2">
         <p class= "texto-img">GAROU: City of the Wolves <br> r$ 249,00<br> jogo base</p>
     </div>
     <div>
-        <img src="assets/img/jogo3.jpg" alt="Imagem 3">
+        <img src="assets/img/clair.avif" alt="Imagem 3">
         <p class= "texto-img">Clair Obscur: Expedition 33 <br> r$ 135,00 <br> jogo base</p>
     </div>
     <div>
-      <img src="assets/img/jogo4.jpeg" alt="Imagem 4">
-      <p class= "texto-img">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+      <img src="assets/img/silent.avif" alt="Imagem 4">
+      <p class= "texto-img">silent hill 2 <br> r$ 150,00 <br> jogo base</p>
     </div>
     <div>
-      <img src="assets/img/jogo5.jpg" alt="Imagem 5">
-      <p class= "texto-img">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+      <img src="assets/img/rogue.jpg" alt="Imagem 5">
+      <p class= "texto-img">Deadzone rogue <br> r$ 299,00 <br> jogo base</p>
     </div>
     </div>
   </div>
@@ -123,24 +124,24 @@
 
     <div class="carrosel-imagens2" id="carrossel2">
       <div>
-        <img src="assets/img/jogo1.webp" alt="Imagem 1">
-        <p class= "texto-img2">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+        <img src="assets/img/god.jpg" alt="Imagem 1">
+        <p class= "texto-img2">god of war <br> <s>r$ 349,90</s> r$ 149,90 <br> jogo base</p>
         </div>
       <div>
-        <img src="assets/img/jogo2.webp" alt="Imagem 2">
-        <p class= "texto-img2">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+        <img src="assets/img/gta.jpg" alt="Imagem 2">
+        <p class= "texto-img2">Grand theft auto v Enhanced<br> <s>r$ 149,90</s> r$ 74,95 <br> jogo base</p>
+    </div> 
+    <div>
+        <img src="assets/img/red.jpg" alt="Imagem 3">
+        <p class= "texto-img2">Red dead redempion ii <br> <s>r$ 299</s> r$ 74,75<br> jogo base</p>
     </div>
     <div>
-        <img src="assets/img/jogo3.jpg" alt="Imagem 3">
-        <p class= "texto-img2">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+      <img src="assets/img/fc.jpg" alt="Imagem 4">
+      <p class= "texto-img2">Edição Standard do EA SPORTS FC™ 25 <br> <s>r$ 249</s> r$ 89,70 <br> jogo base</p>
     </div>
     <div>
-      <img src="assets/img/jogo4.jpeg" alt="Imagem 4">
-      <p class= "texto-img2">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
-    </div>
-    <div>
-      <img src="assets/img/jogo5.jpg" alt="Imagem 5">
-      <p class= "texto-img2">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+     <img src="assets/img/garou.jpg" alt="Imagem 2">
+        <p class= "texto-img">GAROU: City of the Wolves <br> <s>r$399,00</s> r$249,00<br> jogo base</p>
     </div>
     </div>
   </div>
@@ -156,24 +157,24 @@
 
     <div class="carrosel-imagens3" id="carrossel3">
       <div>
-        <img src="assets/img/jogo1.webp" alt="Imagem 1">
-        <p class= "texto-img3">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+        <img src="assets/img/man.jpg" alt="Imagem 1">
+        <p class= "texto-img2">Marvel's Spider-Man 2 <br> r$ 249,90<br> jogo base</p>
         </div>
       <div>
-        <img src="assets/img/jogo2.webp" alt="Imagem 2">
-        <p class= "texto-img3">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+       <img src="assets/img/the.avif" alt="Imagem 2">
+        <p class= "texto-img2">The Precinct <br> r$ 80,99 <br> jogo base</p>
     </div>
     <div>
-        <img src="assets/img/jogo3.jpg" alt="Imagem 3">
-        <p class= "texto-img3">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+        <img src="assets/img/last.jpg" alt="Imagem 3">
+        <p class= "texto-img2">The Last of Us™ Parte II Remastered <br> r$ 199,00<br> jogo base</p>
     </div>
     <div>
-      <img src="assets/img/jogo4.jpeg" alt="Imagem 4">
-      <p class= "texto-img3">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+      <img src="assets/img/simulador.jpg" alt="Imagem 4">
+      <p class= "texto-img2">Farming simulator 25 <br> r$ 99,00 <br> jogo base</p>
     </div>
     <div>
-      <img src="assets/img/jogo5.jpg" alt="Imagem 5">
-      <p class= "texto-img3">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+       <img src="assets/img/silent.avif" alt="Imagem 5">
+      <p class= "texto-img2">Silent hill 2 <br> r$ 150,00 <br> jogo base</p>
     </div>
     </div>
   </div>
@@ -188,23 +189,23 @@
 
     <div class="carrosel-imagens4" id="carrossel4">
         <div class="img4">
-          <img src="assets/img/jogo1.webp" alt="Imagem 1">
+          <img src="assets/img/it.png" alt="Imagem 1">
           <p class= "texto-img4">casuais</p>
           </div>
         <div class="img4">
-          <img src="assets/img/jogo2.webp" alt="Imagem 2">
+          <img src="assets/img/carro.webp" alt="Imagem 2">
           <p class= "texto-img4">corrida</p>
       </div>
       <div class="img4">
-          <img src="assets/img/jogo3.jpg" alt="Imagem 3">
+          <img src="assets/img/tenis.png" alt="Imagem 3">
           <p class= "texto-img4">esporte</p>
       </div>
       <div class="img4">
-        <img src="assets/img/jogo4.jpeg" alt="Imagem 4">
+        <img src="assets/img/king.jpg" alt="Imagem 4">
         <p class= "texto-img4">casuais</p>
       </div>
       <div class="img4">
-        <img src="assets/img/jogo5.jpg" alt="Imagem 5">
+        <img src="assets/img/yoyo.avif" alt="Imagem 5">
         <p class= "texto-img4">jogos indie</p>
       </div>
     </div>
@@ -241,17 +242,19 @@
     <div class="carrosel-imagens5">
         <div>
             <img src="assets/img/user.png" alt="Imagem 1">
-            <p class= "text-img5">Cadastro/ login</p>
+            <a href="<?php echo base_url('login'); ?>" class="text-img5"> Cadastro/ login </a>
             <p class= "texto-img5">Cadastre-se para nos acompanhar e manter sua conta</p>
             </div>
         <div>
             <img src="assets/img/option.png" alt="Imagem 2">
-            <p class= "text-img5">Categorias</p>
+            <a href="#" class="text-img5"> Jogos</a>
             <p class= "texto-img5">Escolha o jogo <br> de sua preferência </p>
         </div>
         <div>
             <img src="assets/img/controle.png" alt="Imagem 3">
-            <p class= "text-img5">Jogos</p>
+            <a href="<?php echo base_url('jogo/1'); ?>" class="text-img5"> Jogos</a>
+
+
             <p class= "texto-img5">Realize a compra <br> e Pronto! Agora é só Se divertir!</p>
         </div>
     </div>
@@ -267,7 +270,7 @@
   allowfullscreen>
 </iframe>
 
-//CAIXINHA FEEDBACK
+<!-- CAIXINHA FEEDBACK -->
 <div class="feedback-container">
   <p class="titulo-topo">DEIXE SUA OPINIÃO SOBRE A PÁGINA</p>
   <h2>FEEDBACK</h2>

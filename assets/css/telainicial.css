@@ -10,6 +10,24 @@
       background-color: #07031c;
       height: 3000px;
     }
+    .cadastre-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border: 2px solid white;
+  border-radius: 20px; /* borda redonda */
+  transition: 0.3s;
+  margin-right: 10PX;
+}
+
+.cadastre-link:hover {
+  background-color: #a65bff; /* roxinho no hover */
+  color: black;
+  border-color: #a65bff;
+}
+
     .all {
         height: 10%;
         background-image: url('fundo2.jpg');
@@ -687,6 +705,7 @@ margin-left: 5%;
       transition: transform 0.3s;
       margin-top: 8px;
       margin-left: 10px;
+      padding-bottom: 20px;
     }
 
     .carrosel-imagens5 img:hover {
@@ -741,7 +760,7 @@ margin-left: 5%;
 
 /*    VIDEO/LIVE    */
 iframe {
-  margin-top: 0PX;
+  margin-top: 60px;
   margin-left: 15%;
       width: 70vw;      /* ocupa 90% da largura da tela */
       max-width: 1200px; /* limite máximo para não ficar gigante */
