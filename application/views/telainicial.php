@@ -51,13 +51,13 @@
                 <img src="assets/img/dead_by_daylight.png" alt="img1">
             </div>
             <div class="slide">
-                <img src="assets/img/dead_by_daylight.png" alt="img2">
+                <img src="assets/img/zelda.avif" alt="img2">
             </div>
             <div class="slide">
-                <img src="assets/img/dead_by_daylight.png" alt="img3">
+                <img src="assets/img/wild.jpg" alt="img3">
             </div>
             <div class="slide">
-                <img src="assets/img/dead_by_daylight.png" alt="img4">
+                <img src="assets/img/civil.jpg" alt="img4">
             </div>
 
             <!-- automatic navigation -->
@@ -90,16 +90,16 @@
 
     <div class="carrosel-imagens" id="carrossel">
       <div>
-        <img src="assets/img/jogo1.webp" alt="Imagem 1">
-        <p class= "texto-img">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+        <img src="assets/img/Blades of Fire.jpg" alt="Imagem 1">
+        <p class= "texto-img">Blades of Fire <br> r$ 150,00 <br> jogo base</p>
         </div>
       <div>
         <img src="assets/img/jogo2.webp" alt="Imagem 2">
-        <p class= "texto-img">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+        <p class= "texto-img">GAROU: City of the Wolves <br> r$ 249,00<br> jogo base</p>
     </div>
     <div>
         <img src="assets/img/jogo3.jpg" alt="Imagem 3">
-        <p class= "texto-img">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+        <p class= "texto-img">Clair Obscur: Expedition 33 <br> r$ 135,00 <br> jogo base</p>
     </div>
     <div>
       <img src="assets/img/jogo4.jpeg" alt="Imagem 4">
@@ -187,26 +187,26 @@
     </div>
 
     <div class="carrosel-imagens4" id="carrossel4">
-      <div>
-        <img src="assets/img/jogo1.webp" alt="Imagem 1">
-        <p class= "texto-img4">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
-        </div>
-      <div>
-        <img src="assets/img/jogo2.webp" alt="Imagem 2">
-        <p class= "texto-img4">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
-    </div>
-    <div>
-        <img src="assets/img/jogo3.jpg" alt="Imagem 3">
-        <p class= "texto-img4">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
-    </div>
-    <div>
-      <img src="assets/img/jogo4.jpeg" alt="Imagem 4">
-      <p class= "texto-img4">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
-    </div>
-    <div>
-      <img src="assets/img/jogo5.jpg" alt="Imagem 5">
-      <p class= "texto-img4">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
-    </div>
+        <div class="img4">
+          <img src="assets/img/jogo1.webp" alt="Imagem 1">
+          <p class= "texto-img4">casuais</p>
+          </div>
+        <div class="img4">
+          <img src="assets/img/jogo2.webp" alt="Imagem 2">
+          <p class= "texto-img4">corrida</p>
+      </div>
+      <div class="img4">
+          <img src="assets/img/jogo3.jpg" alt="Imagem 3">
+          <p class= "texto-img4">esporte</p>
+      </div>
+      <div class="img4">
+        <img src="assets/img/jogo4.jpeg" alt="Imagem 4">
+        <p class= "texto-img4">casuais</p>
+      </div>
+      <div class="img4">
+        <img src="assets/img/jogo5.jpg" alt="Imagem 5">
+        <p class= "texto-img4">jogos indie</p>
+      </div>
     </div>
   </div>
 
@@ -216,7 +216,7 @@
     <main class="wrapper" >
         <div class="divTexto">
             <h1 class="sobrenos">SOBRE NÓS</h1>    
-            <h3 class="textoSobre">
+            <h2 class="textoSobre">
                 Lorem, ipsum dolor sit amet consectetur <br>
                 adipisicing elit. Nemo consectetur quam, quaerat cupiditate qui rerum totam odio? <br>
                 Ut temporibus autem ex repellat eveniet, voluptatem iste a! Provident optio repudiandae laboriosam.
@@ -229,7 +229,7 @@
         <li class = "img1"><img src="assets/img/Bloodborne.jpg" alt="Bloodborne"></li>
         <li class = "img2"><img src="assets/img/dark_souls.avif" alt="Dark Souls"></li>
         <li class = "img3"><img src="assets/img/Fortnite.jpg" alt="Fortnite"></li>
-        <li class = "img4"><img src="assets/img/callofduty.avif" alt="Call of Duty"></li>
+        <li class = "img44"><img src="assets/img/callofduty.avif" alt="Call of Duty"></li>
         <li class = "img5"><img src="assets/img/batman.avif" alt="Batman"></li>
         </ul>
   </footer>
@@ -240,33 +240,42 @@
 <div class="carrosel-container5">
     <div class="carrosel-imagens5">
         <div>
-            <img src="assets/img/jogo1.webp" alt="Imagem 1">
+            <img src="assets/img/user.png" alt="Imagem 1">
+            <p class= "text-img5">Cadastro/ login</p>
             <p class= "texto-img5">Cadastre-se para nos acompanhar e manter sua conta</p>
             </div>
         <div>
-            <img src="assets/img/jogo2.webp" alt="Imagem 2">
-            <p class= "texto-img5">Escolha o jogo de sua preferência </p>
+            <img src="assets/img/option.png" alt="Imagem 2">
+            <p class= "text-img5">Categorias</p>
+            <p class= "texto-img5">Escolha o jogo <br> de sua preferência </p>
         </div>
         <div>
-            <img src="assets/img/jogo3.jpg" alt="Imagem 3">
-            <p class= "texto-img5">Realize a compra e Pronto! Agora é só Se divertir!</p>
+            <img src="assets/img/controle.png" alt="Imagem 3">
+            <p class= "text-img5">Jogos</p>
+            <p class= "texto-img5">Realize a compra <br> e Pronto! Agora é só Se divertir!</p>
         </div>
     </div>
 </div>
 
 
 <!-- VIDEO/LIVE -->
-<video controls poster="https://i.imgur.com/YP07pXb.jpg" preload="metadata">
-    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
-    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-    Seu navegador não suporta vídeos HTML5.
-  </video>VB
+<iframe width="800" height="450" 
+  src="https://www.youtube.com/embed/cWBwFhUv1-8" 
+  title="God of War Ragnarök Trailer" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen>
+</iframe>
 
-
-
-
-
-
+//CAIXINHA FEEDBACK
+<div class="feedback-container">
+  <p class="titulo-topo">DEIXE SUA OPINIÃO SOBRE A PÁGINA</p>
+  <h2>FEEDBACK</h2>
+  <form action="feedback.php" method="post" class="form-feedback">
+    <input type="text" name="feedback" placeholder="">
+    <button type="submit">ENVIAR</button>
+  </form>
+</div>
 
 
   <script>
@@ -311,7 +320,7 @@
     // Carrossel das quartas imagens
     function scrollCarousel4(direction4) {  
       const carrossel4 = document.getElementById('carrossel4');
-      const scrollAmount4 = 270; // valor ajustável conforme o tamanho da imagem
+      const scrollAmount4 = 240; // valor ajustável conforme o tamanho da imagem
       carrossel4.scrollBy({ left: direction4 * scrollAmount4, behavior: 'smooth' });
     }
     
