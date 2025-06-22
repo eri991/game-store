@@ -6,10 +6,10 @@
     }
     body{
       background-color: black;
-      height: 2000px;
+      height: 3000px;
     }
     .all {
-        height: 20%;
+        height: 10%;
         background-image: url('fundo2.jpg');
         background-size: cover;
         background-position: center;
@@ -93,7 +93,7 @@
     justify-content: center;
   }
 
-/*PRIMEIO CARROSSEL*/
+/*PRIMEIRO CARROSSEL*/
 
 h2{
   color: white;
@@ -166,10 +166,7 @@ h2{
     .botao-seta:hover {
       background-color: #aaa;
     }
-    .img1{
-
-      height: 240px;
-    }
+    
     .texto-img{
       color: white;
        font-family: "Smooch Sans", sans-serif;
@@ -178,42 +175,257 @@ h2{
         font-style: normal;
     }
 
+/*SEGUNDO CARROSSEL*/
+h2{
+  color: white;
+  font-family: "Smooch Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.carrosel-container2 {
+      width: 90%;
+      max-width: 900px;
+      margin: 50px auto;
+      position: relative;
+    }
 
+    .carrosel-container2 h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
 
+    .carrosel-imagens2 {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 16px;
+      padding: 10px;
+    }
 
+    .carrosel-imagens2::-webkit-scrollbar {
+      display: none;
+    }
 
+    .carrosel-imagens2 img {
+      flex: 0 0 auto;
+      width: 250px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
 
+    .carrosel-imagens2 img:hover {
+      transform: scale(1.05);
+    }
 
+    .botoes-navegacao2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+    }
 
+    .botao-seta2 {
+      background-color: #ccc;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
 
+    .botao-seta2:hover {
+      background-color: #aaa;
+    }
+    
+    .texto-img2{
+      color: white;
+       font-family: "Smooch Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
 
+/*TERCEIRO CARROSSEL*/
+h2{
+  color: white;
+  font-family: "Smooch Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.carrosel-container3 {
+      width: 90%;
+      max-width: 900px;
+      margin: 50px auto;
+      position: relative;
+    }
 
+    .carrosel-container3 h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
 
+    .carrosel-imagens3 {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 16px;
+      padding: 10px;
+    }
 
+    .carrosel-imagens3::-webkit-scrollbar {
+      display: none;
+    }
 
+    .carrosel-imagens3 img {
+      flex: 0 0 auto;
+      width: 250px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .carrosel-imagens3 img:hover {
+      transform: scale(1.05);
+    }
+
+    .botoes-navegacao3 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .botao-seta3 {
+      background-color: #ccc;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+
+    .botao-seta3:hover {
+      background-color: #aaa;
+    }
+    
+    .texto-img3{
+      color: white;
+       font-family: "Smooch Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+/*QUARTO CARROSSEL*/
+h2{
+  color: white;
+  font-family: "Smooch Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.carrosel-container4 {
+      width: 90%;
+      max-width: 900px;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    .carrosel-container4 h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .carrosel-imagens4 {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 16px;
+      padding: 10px;
+    }
+
+    .carrosel-imagens4::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carrosel-imagens4 img {
+      flex: 0 0 auto;
+      width: 250px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .carrosel-imagens4 img:hover {
+      transform: scale(1.05);
+    }
+
+    .botoes-navegacao4 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .botao-seta4 {
+      background-color: #ccc;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+
+    .botao-seta4:hover {
+      background-color: #aaa;
+    }
+    
+    .texto-img4{
+      color: white;
+       font-family: "Smooch Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+/*SOBRE NOS*/
     .sobrenos {
+      padding-top: 40px;
        font-family: monospace;
-       border-right: 4px solid;
-       animation: animaMarcador 1s linear infinite;
-       white-space: nowrap;
-       width: 9ch;
-       overflow: hidden;/*elemento vazado não vai aparecer*/
-       animation: animaTexto 2s steps(9) 1s forwards, animaMarcador 1s linear infinite;
         font-size: 30px;
         color: white;
         
     }
-    @keyframes animaMarcador{
-        50%{
-            border-right: transparent;
-        }
-    }
 
-    @keyframes animaTexto{
-        0%{
-            width: 0;
-        }
-    }
     
     #mainHeader {
         display: flex;
@@ -443,7 +655,6 @@ margin-left: 5%;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(9px);
 
-
 }
 
 .wrapper1 {
@@ -456,3 +667,4 @@ margin-left: 5%;
   transform-style: preserve-3d;
   animation: spin 4s linear infinite;
 }
+/*FIM DO SOBRE NOS*/

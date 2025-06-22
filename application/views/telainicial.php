@@ -89,7 +89,7 @@
     </div>
 
     <div class="carrosel-imagens" id="carrossel">
-      <div class= "img1">
+      <div>
         <img src="assets/img/jogo1.webp" alt="Imagem 1">
         <p class= "texto-img">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
         </div>
@@ -110,30 +110,108 @@
       <p class= "texto-img">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
     </div>
     </div>
-    
+  </div>
 
+<!-- segundo carrosel -->
+  <div class="carrosel-container2">
+    <h2>OFERTAS DE OUTRO MUNDO</h2>
 
+    <div class="botoes-navegacao2">
+      <button class="botao-seta2" onclick="scrollCarousel2(-1)">&#x276E;</button>
+      <button class="botao-seta2" onclick="scrollCarousel2(1)">&#x276F;</button>
+    </div>
+
+    <div class="carrosel-imagens2" id="carrossel2">
+      <div>
+        <img src="assets/img/jogo1.webp" alt="Imagem 1">
+        <p class= "texto-img2">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+        </div>
+      <div>
+        <img src="assets/img/jogo2.webp" alt="Imagem 2">
+        <p class= "texto-img2">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    <div>
+        <img src="assets/img/jogo3.jpg" alt="Imagem 3">
+        <p class= "texto-img2">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    <div>
+      <img src="assets/img/jogo4.jpeg" alt="Imagem 4">
+      <p class= "texto-img2">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    <div>
+      <img src="assets/img/jogo5.jpg" alt="Imagem 5">
+      <p class= "texto-img2">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    </div>
+  </div>
+
+<!-- terceiro carrosel -->
+<div class="carrosel-container3">
+    <h2>PRINCIPAIS NOVOS LANÇAMENTOS</h2>
+
+    <div class="botoes-navegacao3">
+      <button class="botao-seta3" onclick="scrollCarousel3(-1)">&#x276E;</button>
+      <button class="botao-seta3" onclick="scrollCarousel3(1)">&#x276F;</button>
+    </div>
+
+    <div class="carrosel-imagens3" id="carrossel3">
+      <div>
+        <img src="assets/img/jogo1.webp" alt="Imagem 1">
+        <p class= "texto-img3">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+        </div>
+      <div>
+        <img src="assets/img/jogo2.webp" alt="Imagem 2">
+        <p class= "texto-img3">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    <div>
+        <img src="assets/img/jogo3.jpg" alt="Imagem 3">
+        <p class= "texto-img3">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    <div>
+      <img src="assets/img/jogo4.jpeg" alt="Imagem 4">
+      <p class= "texto-img3">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    <div>
+      <img src="assets/img/jogo5.jpg" alt="Imagem 5">
+      <p class= "texto-img3">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    </div>
+  </div>
+
+  <!-- quarto carrosel -->
+   <div class="carrosel-container4">
+    <h2>PRINCIPAIS NOVOS LANÇAMENTOS</h2>
+    <div class="botoes-navegacao4">
+      <button class="botao-seta4" onclick="scrollCarousel4(-1)">&#x276E;</button>
+      <button class="botao-seta4" onclick="scrollCarousel4(1)">&#x276F;</button>
+    </div>
+
+    <div class="carrosel-imagens4" id="carrossel4">
+      <div>
+        <img src="assets/img/jogo1.webp" alt="Imagem 1">
+        <p class= "texto-img4">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+        </div>
+      <div>
+        <img src="assets/img/jogo2.webp" alt="Imagem 2">
+        <p class= "texto-img4">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    <div>
+        <img src="assets/img/jogo3.jpg" alt="Imagem 3">
+        <p class= "texto-img4">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    <div>
+      <img src="assets/img/jogo4.jpeg" alt="Imagem 4">
+      <p class= "texto-img4">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    <div>
+      <img src="assets/img/jogo5.jpg" alt="Imagem 5">
+      <p class= "texto-img4">Blades of <br> Fire r$ 150,00 <br> jogo base</p>
+    </div>
+    </div>
   </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- SOBRE NOS -->
     <div class="all" style = "background-image: url('<?php echo base_url('assets/img/fundo (1).jpg')?>')">
     <main class="wrapper" >
         <div class="divTexto">
@@ -156,27 +234,55 @@
         </ul>
   </footer>
 </div>
+<!-- FIM SOBRE NOS -->
+
+<!--  -->
   <script>
-    // Carrossel de imagens
+// Script para o slider automático
+        // Define o contador inicial e ativa o primeiro radio button   
+    let count = 1;
+        document.getElementById("radio1").checked = true;
+        
+        setInterval(function(){
+            nextImage();
+        }, 2000);
+
+        function nextImage(){
+            count++;
+            if(count > 4){
+                count = 1;
+            }
+            document.getElementById("radio"+count).checked = true;
+        }
+
+
+    // Carrossel das primeiras imagens
      function scrollCarousel(direction) {
       const carrossel = document.getElementById('carrossel');
       const scrollAmount = 270; // valor ajustável conforme o tamanho da imagem
       carrossel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
-    let count = 1;
-    document.getElementById("radio1").checked = true;
     
-    setInterval(function(){
-        nextImage();
-    }, 2000);
-
-    function nextImage(){
-        count++;
-        if(count > 4){
-            count = 1;
-        }
-        document.getElementById("radio"+count).checked = true;
+    // Carrossel das segundas imagens
+    function scrollCarousel2(direction2) {
+      const carrossel2 = document.getElementById('carrossel2');
+      const scrollAmount2 = 270; // valor ajustável conforme o tamanho da imagem
+      carrossel2.scrollBy({ left: direction2 * scrollAmount2, behavior: 'smooth' });
     }
+
+    // Carrossel das terceiras imagens
+    function scrollCarousel3(direction3) {
+      const carrossel3 = document.getElementById('carrossel3');
+      const scrollAmount3 = 270; // valor ajustável conforme o tamanho da imagem
+      carrossel3.scrollBy({ left: direction3 * scrollAmount3, behavior: 'smooth' });
+    }
+    // Carrossel das quartas imagens
+    function scrollCarousel4(direction4) {  
+      const carrossel4 = document.getElementById('carrossel4');
+      const scrollAmount4 = 270; // valor ajustável conforme o tamanho da imagem
+      carrossel4.scrollBy({ left: direction4 * scrollAmount4, behavior: 'smooth' });
+    }
+    
   </script>
 
 </body>
