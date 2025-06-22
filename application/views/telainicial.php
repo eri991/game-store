@@ -236,7 +236,39 @@
 </div>
 <!-- FIM SOBRE NOS -->
 
-<!--  -->
+<!-- CONTAINER-ICONS -->
+<div class="carrosel-container5">
+    <div class="carrosel-imagens5">
+        <div>
+            <img src="assets/img/jogo1.webp" alt="Imagem 1">
+            <p class= "texto-img5">Cadastre-se para nos acompanhar e manter sua conta</p>
+            </div>
+        <div>
+            <img src="assets/img/jogo2.webp" alt="Imagem 2">
+            <p class= "texto-img5">Escolha o jogo de sua preferência </p>
+        </div>
+        <div>
+            <img src="assets/img/jogo3.jpg" alt="Imagem 3">
+            <p class= "texto-img5">Realize a compra e Pronto! Agora é só Se divertir!</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- VIDEO/LIVE -->
+<video controls poster="https://i.imgur.com/YP07pXb.jpg" preload="metadata">
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeos HTML5.
+  </video>VB
+
+
+
+
+
+
+
+
   <script>
 // Script para o slider automático
         // Define o contador inicial e ativa o primeiro radio button   

@@ -5,7 +5,7 @@
         border: 0px;
     }
     body{
-      background-color: black;
+      background-color: #07031c;
       height: 3000px;
     }
     .all {
@@ -425,7 +425,6 @@ h2{
         color: white;
         
     }
-
     
     #mainHeader {
         display: flex;
@@ -668,3 +667,96 @@ margin-left: 5%;
   animation: spin 4s linear infinite;
 }
 /*FIM DO SOBRE NOS*/
+
+/*CONTAINER-ICONS*/
+.carrosel-container5 {
+      width: 90%;
+      max-width: 900px;
+      position: relative;
+      margin-top: 10%;
+      margin-left: 22%;
+   }
+
+    .carrosel-container5 h2 {
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .carrosel-imagens5 {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 16px;
+      padding: 10px;
+     
+    }
+    .carrosel-imagens5 > div {
+       background-color: #1c1c1c;
+       height: 250px;
+       width: 240px;
+       border-radius: 15px;
+    }
+
+
+    .carrosel-imagens5::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carrosel-imagens5 img {
+      flex: 0 0 auto;
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .carrosel-imagens5 img:hover {
+      transform: scale(1.05);
+    }
+
+    .botoes-navegacao5 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .botao-seta5 {
+      background-color: #ccc;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+
+    .botao-seta5:hover {
+      background-color: #aaa;
+    }
+    
+    .texto-img5{
+      color: white;
+      font-size: 25px;
+    }
+
+/*    VIDEO/LIVE    */
+video {
+  margin-top: 40PX;
+  margin-left: 15%;
+      width: 70vw;      /* ocupa 90% da largura da tela */
+      max-width: 1200px; /* limite máximo para não ficar gigante */
+      height: auto;     /* mantém a proporção */
+      border-radius: 12px;
+      box-shadow: 0 0 25px #8c52ff;
+      outline: none;
+      display: block;
+    }
