@@ -57,13 +57,13 @@
 
     <footer class="menu-jogos">
         <ul>
-        <li class = "img1"><img src="assets/img/Bloodborne.jpg" alt="Bloodborne"></li>
-        <li class = "img2"><img src="assets/img/dark_souls.avif" alt="Dark Souls"></li>
-        <li class = "img3"><img src="assets/img/Fortnite.jpg" alt="Fortnite"></li>
-        <li class = "img4"><img src="assets/img/callofduty.avif" alt="Call of Duty"></li>
-        <li class = "img5"><img src="assets/img/batman.avif" alt="Batman"></li>
+            <?php foreach ($jogos as $index => $jogo): ?>
+                <li class="img<?= $index + 1 ?>">
+                    <img src="<?= base_url($jogo->url) ?>" alt="<?= htmlspecialchars($jogo->titulo) ?>">
+                </li>
+            <?php endforeach; ?>
         </ul>
-  </footer>
+    </footer>
 
   <script>
     let elem_loading = document.querySelector('.pyramid-loader');

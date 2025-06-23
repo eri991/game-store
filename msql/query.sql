@@ -1,3 +1,6 @@
+DROP DATABASE gmaxdb;
+CREATE DATABASE IF NOT EXISTS gmaxdb;
+
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
@@ -139,25 +142,28 @@ COMMIT;
 
 
 -- Inserção de usuários (IDs fixos)
-INSERT INTO usuarios (id_user, primeiro_nome, sobrenome, data_nasc, pais, nickname, email, senha)
+INSERT INTO usuarios (id_user, nome_completo, data_nasc, pais, nickname, email, senha)
 VALUES
 (1, 'João Silva', '2000-05-15', 'Brasil', 'joaogamer', 'joao@example.com', '123456'),
 (2, 'Maria Oliveira', '1995-10-30', 'Brasil', 'mariawin', 'maria@example.com', '654321');
 
 -- Inserção de categorias
-INSERT INTO categoria (nome_categoria)
+INSERT INTO categoria (id_categoria, nome_categoria)
 VALUES
 (1, 'Ação'),
 (2, 'Aventura'),
 (3, 'RPG'),
 (4, 'Simulação');
 
--- Inserção de jogos
-INSERT INTO jogo (id_categoria, titulo, descricao, preco, estoque, url)
-VALUES
-(1, 1, 'Battle Strike', 'Jogo de tiro com ação intensa.', '59.99', '50', 'assets/img/jogos/battle_strike.jpg'),
-(2, 2, 'Island Quest', 'Explore uma ilha cheia de mistérios.', '89.90', '30', 'assets/img/jogos/island_quest.jpg'),
-(3, 3, 'Dragon Realms', 'Um RPG com dragões e magias.', '120.00', '20', 'assets/img/jogos/dragon_realms.jpg');
+INSERT INTO jogo (id_jogo, id_categoria, titulo, descricao, preco, estoque, url) VALUES
+(1, 1, 'God of War', 'Kratos enfrenta deuses nórdicos em uma jornada épica.', '199.90', '50', 'https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_4_cover.jpg'),
+(2, 2, 'The Legend of Zelda: Breath of the Wild', 'Explore um vasto mundo aberto em Hyrule.', '249.90', '30', 'https://upload.wikimedia.org/wikipedia/en/0/0b/The_Legend_of_Zelda_Breath_of_the_Wild.jpg'),
+(3, 3, 'The Witcher 3: Wild Hunt', 'Acompanhe Geralt em sua busca por Ciri.', '149.90', '40', 'https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg'),
+(4, 4, 'FIFA 22', 'Experimente o futebol com gráficos realistas.', '299.90', '100', 'https://upload.wikimedia.org/wikipedia/en/2/2e/FIFA_22_Cover.jpg'),
+(5, 4, 'Forza Horizon 5', 'Corridas emocionantes no México.', '349.90', '60', 'https://upload.wikimedia.org/wikipedia/en/8/8c/Forza_Horizon_5_cover_art.jpg'),
+(6, 4, 'The Sims 4', 'Crie e controle pessoas em um mundo virtual.', '99.90', '80', 'https://upload.wikimedia.org/wikipedia/en/0/0b/The_Sims_4_cover_art.jpg'),
+(7, 1, 'Resident Evil Village', 'Sobreviva aos horrores de um vilarejo misterioso.', '229.90', '70', 'https://upload.wikimedia.org/wikipedia/en/2/2e/Resident_Evil_Village.png'),
+(8, 1, 'Civilization VI', 'Construa um império e lidere-o através das eras.', '89.90', '90', 'https://upload.wikimedia.org/wikipedia/en/5/5c/Civilization_VI_cover_art.jpg');
 
 -- Inserção de carrinhos (IDs fixos)
 INSERT INTO carrinho (id_carrinho, id_usuario)
@@ -193,53 +199,45 @@ INSERT INTO categoria (nome_categoria) VALUES
 ('Terror'),
 ('Estratégia');
 
-
-INSERT INTO jogo (id_categoria, titulo, descricao, preco, estoque, url) VALUES
-(1, 'God of War', 'Kratos enfrenta deuses nórdicos em uma jornada épica.', '199.90', '50', 'https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_4_cover.jpg'),
-(2, 'The Legend of Zelda: Breath of the Wild', 'Explore um vasto mundo aberto em Hyrule.', '249.90', '30', 'https://upload.wikimedia.org/wikipedia/en/0/0b/The_Legend_of_Zelda_Breath_of_the_Wild.jpg'),
-(3, 'The Witcher 3: Wild Hunt', 'Acompanhe Geralt em sua busca por Ciri.', '149.90', '40', 'https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg'),
-(4, 'FIFA 22', 'Experimente o futebol com gráficos realistas.', '299.90', '100', 'https://upload.wikimedia.org/wikipedia/en/2/2e/FIFA_22_Cover.jpg'),
-(5, 'Forza Horizon 5', 'Corridas emocionantes no México.', '349.90', '60', 'https://upload.wikimedia.org/wikipedia/en/8/8c/Forza_Horizon_5_cover_art.jpg'),
-(6, 'The Sims 4', 'Crie e controle pessoas em um mundo virtual.', '99.90', '80', 'https://upload.wikimedia.org/wikipedia/en/0/0b/The_Sims_4_cover_art.jpg'),
-(7, 'Resident Evil Village', 'Sobreviva aos horrores de um vilarejo misterioso.', '229.90', '70', 'https://upload.wikimedia.org/wikipedia/en/2/2e/Resident_Evil_Village.png'),
-(8, 'Civilization VI', 'Construa um império e lidere-o através das eras.', '89.90', '90', 'https://upload.wikimedia.org/wikipedia/en/5/5c/Civilization_VI_cover_art.jpg');
-
 -- God of War (2018)
 UPDATE jogo
-SET url = 'https://img.hype.games/cdn/209a330a-50f4-48d1-9db7-7485e6a81d87cover.jpg'
+SET url = 'assets/img/godofwar.webp'
 WHERE titulo = 'God of War';
 
 -- The Legend of Zelda: Breath of the Wild
 UPDATE jogo
-SET url = 'https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58'
+SET url = 'assets/img/zelda.avif'
 WHERE titulo = 'The Legend of Zelda: Breath of the Wild';
 
 -- The Witcher 3: Wild Hunt
 UPDATE jogo
-SET url = 'https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f'
+SET url = 'assets/img/witcher.jfif'
 WHERE titulo = 'The Witcher 3: Wild Hunt';
 
 -- FIFA 22
 UPDATE jogo
-SET url = 'https://assets.nintendo.com/image/upload/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000038676/02b078ec6e65f597dc655c1b958bf2dd07961ea45db4d59688ca8746bf28ae6d'
+SET url = 'assets/img/fifa.avif'
 WHERE titulo = 'FIFA 22';
 
 -- Forza Horizon 5
 UPDATE jogo
-SET url = 'https://assetsio.gnwcdn.com/apps.33953.13718773309227929.bebdcc0e-1ed5-4778-8732-f4ef65a2f445.9428b75f-2c08-4e70-9f95-281741b15341?width=120&height=68&fit=crop&quality=70&format=jpg&auto=webp'
+SET url = 'assets/img/forza.jpg'
 WHERE titulo = 'Forza Horizon 5';
 
 -- The Sims 4
 UPDATE jogo
-SET url = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgATd2tpUBjL8flQo0V5ci57UgK4Y63zv0dGJfGS4B3oKUV1utaOQG7TUrA7yJvUMsMAq6nR19sgeN_sbhZkyVSG7AX34Ae7hUx4TeKfWcyLkvQ9g6A1aKH9k3GzkPQ3kZ5iFzwK2ofEiy071j6lDbDhyZndY8YifVk8mLVBPlgSJz8SM2QV3RXbmc0/s739/The-Sims-4.jpeg'
+SET url = 'assets/img/sims.jpeg'
 WHERE titulo = 'The Sims 4';
 
 -- Resident Evil Village
 UPDATE jogo
-SET url = 'https://popverse.com.br/wp-content/uploads/2024/06/Resident-Evil-Village.jpg'
+SET url = 'assets/img/Resident-Evil-Village.jpg'
 WHERE titulo = 'Resident Evil Village';
 
 -- Civilization VI
 UPDATE jogo
-SET url = 'https://cdn1.epicgames.com/cd14dcaa4f3443f19f7169a980559c62/offer/EGS_SidMeiersCivilizationVI_FiraxisGames_S1-2560x1440-2fcd1c150ac6d8cdc672ae042d2dd179.jpg'
+SET url = 'assets/img/CivilizationVI.jpg'
 WHERE titulo = 'Civilization VI';
+
+select * from itens_carrinho;
+delete from itens_carrinho where id_item = 4 or id_item = 5;

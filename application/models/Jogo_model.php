@@ -14,4 +14,12 @@ class Jogo_model extends CI_Model {
         $query = $this->db->get();
         return $query->row_array(); // Retorna um array associativo
     }
+    
+    public function get_jogos_home($limit = 5)
+    {
+        return $this->db
+                    ->limit($limit)
+                    ->get('jogo')
+                    ->result();
+    }
 }
