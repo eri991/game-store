@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title><?= $jogo['titulo'] ?> - G-Max</title>
-    
+    <link rel="shortcut icon" href="<?php echo base_url('assets/img/icon_Gmax.ico')?>" type="image/x-icon">
     <link rel="stylesheet" href="<?= base_url('assets/css/jogoPage.css') ?>?v=<?= time() ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
