@@ -16,8 +16,7 @@
     <header id='mainHeader'>
         <nav id='mainNav'>
             <div>
-                <img id='logoHeader' src="<?php echo base_url('assets/img/icon_Gmax.ico') ?>" alt="Logo G-Max">
-                <p>Carrinho</p>
+                <a href="<?= base_url('telainicial') ?>"><img id='logoHeader' src="<?php echo base_url('assets/img/icon_Gmax.ico') ?>" alt="Logo G-Max"></a>
             </div>
             <a href="https://help.steampowered.com/pt/" target="_blank">Precisa de ajuda?</a>
             <a href="<?= base_url('carrinho') ?>">Carrinho</a>
@@ -31,7 +30,7 @@
         </div>
         <div class="wrapLeft">
             <div class="imgDiv">
-                <img src="<?= $jogo['url'] ?>" alt="<?= $jogo['titulo'] ?>" class="imgJogo">
+                <img src="<?= base_url($jogo['url']) ?>" alt="<?= $jogo['titulo'] ?>" class="imgJogo">
             </div>
             <p class="descricao"><?= $jogo['descricao'] ?></p>
             <div class="categorias">

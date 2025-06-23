@@ -65,7 +65,7 @@ CREATE TABLE `usuarios` (
   `data_nasc` DATE NOT NULL,
   `pais` VARCHAR(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nickname` VARCHAR(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `data_cadastro` DATE DEFAULT CURRENT_TIMESTAMP,
+  `data_cadastro` DATETIME DEFAULT CURRENT_TIMESTAMP,
   `email` VARCHAR(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `senha` VARCHAR(200) COLLATE utf8mb4_unicode_ci NOT NULL
 );

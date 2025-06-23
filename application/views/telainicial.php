@@ -11,31 +11,29 @@
 <body>
 
 	<header id='mainHeader'>
-		<nav id= 'mainNav'>
-			<div id="logoman">
-    			<img id= 'logoHeader' src="<?php echo base_url('assets/img/icon_Gmax.ico') ?>" alt="Logo">
+        <div id="logoman">
+                <a href="<?= base_url('telainicial') ?>"><img id='logoHeader' src="<?php echo base_url('assets/img/icon_Gmax.ico') ?>" alt="Logo G-Max"></a>
                 <h1 id="logoNome">G-Max</h1>
-			</div>
+            </div>
+        <nav id='mainNav'>
             <div id="divLista">
                 <ul class="listaNav">
-                  <a href="<?php echo base_url('cadastro'); ?>" class="cadastre-link">CADASTRE-SE </a>
-                    <li>INÍCIO</li>
+                    <a href="<?php echo base_url('cadastro'); ?>" class="cadastre-link">CADASTRE-SE </a>
+                    <a href="<?php echo base_url('login'); ?>" class="cadastre-link">LOGIN </a>
                     <li>
                         <div class="input-container">
                             <input id="searchInput" type="search" placeholder="Pesquisar">
-                            
                             <label for="searchInput" id="searchPlaceholder">
                                 <img id='pesquisarLupa' src="<?php echo base_url('assets/img/lupa.png') ?>" alt="lupa" style="width: 20px;">                                    
                             </label>
-                            
                         </div>
                     </li>
-                    <li><img id="carrinho" src="<?php echo base_url('assets/img/carrinho.png') ?>" alt="carrinho" style="width: 30px;"></li>
-                    <li><img id='pesquisarLupa' src="<?php echo base_url('assets/img/lista.png') ?>" alt="lista" style="width: 30px;"></li>
+                    <a href="<?php echo base_url('carrinho'); ?>"><li><img id="carrinho" src="<?php echo base_url('assets/img/carrinho.png') ?>" alt="carrinho" style="width: 30px;"></li></a>
+                    <li><img id='listaheader' src="<?php echo base_url('assets/img/lista.png') ?>" alt="lista" style="width: 30px;"></li>
                 </ul>
             </div>
-		</nav>
-	</header>
+        </nav>
+    </header>
 
     <!-- SLIDER -->
     <div class="slider">
@@ -80,106 +78,73 @@
 <!-- FIM SLIDER -->]
 
 
-<!-- primeiro carrosel -->
- <div class="carrosel-container">
-    <h2>DESCUBRA UM ESTILO NOVO</h2>
-
-    <div class="botoes-navegacao">
+<div class="carrosel-container">
+  <h2>DESCUBRA UM ESTILO NOVO</h2>
+  <div class="botoes-navegacao">
       <button class="botao-seta" onclick="scrollCarousel(-1)">&#x276E;</button>
       <button class="botao-seta" onclick="scrollCarousel(1)">&#x276F;</button>
     </div>
-
-    <div class="carrosel-imagens" id="carrossel">
+  <div class="carrosel-imagens" id="carrossel">
+    <?php foreach ($jogos_descubra as $jogo): ?>
       <div>
-        <img src="assets/img/Blades of Fire.jpg" alt="Imagem 1">
-        <p class= "texto-img">Blades of Fire <br> r$ 150,00 <br> jogo base</p>
-        </div>
-      <div>
-        <img src="assets/img/garou.jpg" alt="Imagem 2">
-        <p class= "texto-img">GAROU: City of the Wolves <br> r$ 249,00<br> jogo base</p>
-    </div>
-    <div>
-        <img src="assets/img/clair.avif" alt="Imagem 3">
-        <p class= "texto-img">Clair Obscur: Expedition 33 <br> r$ 135,00 <br> jogo base</p>
-    </div>
-    <div>
-      <img src="assets/img/silent.avif" alt="Imagem 4">
-      <p class= "texto-img">silent hill 2 <br> r$ 150,00 <br> jogo base</p>
-    </div>
-    <div>
-      <img src="assets/img/rogue.jpg" alt="Imagem 5">
-      <p class= "texto-img">Deadzone rogue <br> r$ 299,00 <br> jogo base</p>
-    </div>
-    </div>
+        <a href="<?= base_url('jogo/' . $jogo->id_jogo) ?>">
+          <img src="<?= base_url($jogo->url) ?>" alt="<?= htmlspecialchars($jogo->titulo) ?>">
+        </a>
+        <p class="texto-img">
+          <?= htmlspecialchars($jogo->titulo) ?><br>
+          R$ <?= number_format($jogo->preco, 2, ',', '.') ?><br>
+        </p>
+      </div>
+    <?php endforeach; ?>
   </div>
+</div>
 
-<!-- segundo carrosel -->
-  <div class="carrosel-container2">
-    <h2>OFERTAS DE OUTRO MUNDO</h2>
-
-    <div class="botoes-navegacao2">
+<!-- CARROSSEL 2 -->
+<div class="carrosel-container2">
+  <h2>OFERTAS DE OUTRO MUNDO</h2>
+  <div class="botoes-navegacao2">
       <button class="botao-seta2" onclick="scrollCarousel2(-1)">&#x276E;</button>
       <button class="botao-seta2" onclick="scrollCarousel2(1)">&#x276F;</button>
     </div>
-
-    <div class="carrosel-imagens2" id="carrossel2">
+  <div class="carrosel-imagens2" id="carrossel2">
+    <?php foreach ($jogos_ofertas as $jogo): ?>
       <div>
-        <img src="assets/img/god.jpg" alt="Imagem 1">
-        <p class= "texto-img2">god of war <br> <s>r$ 349,90</s> r$ 149,90 <br> jogo base</p>
-        </div>
-      <div>
-        <img src="assets/img/gta.jpg" alt="Imagem 2">
-        <p class= "texto-img2">Grand theft auto v Enhanced<br> <s>r$ 149,90</s> r$ 74,95 <br> jogo base</p>
-    </div> 
-    <div>
-        <img src="assets/img/red.jpg" alt="Imagem 3">
-        <p class= "texto-img2">Red dead redempion ii <br> <s>r$ 299</s> r$ 74,75<br> jogo base</p>
-    </div>
-    <div>
-      <img src="assets/img/fc.jpg" alt="Imagem 4">
-      <p class= "texto-img2">Edição Standard do EA SPORTS FC™ 25 <br> <s>r$ 249</s> r$ 89,70 <br> jogo base</p>
-    </div>
-    <div>
-     <img src="assets/img/garou.jpg" alt="Imagem 2">
-        <p class= "texto-img">GAROU: City of the Wolves <br> <s>r$399,00</s> r$249,00<br> jogo base</p>
-    </div>
-    </div>
+        <a href="<?= base_url('jogo/' . $jogo->id_jogo) ?>">
+          <img src="<?= base_url($jogo->url) ?>" alt="<?= htmlspecialchars($jogo->titulo) ?>">
+        </a>
+        <p class="texto-img2">
+          <?= htmlspecialchars($jogo->titulo) ?><br>
+          <s>R$ <?= number_format($jogo->preco * 1.5, 2, ',', '.') ?></s>
+          R$ <?= number_format($jogo->preco, 2, ',', '.') ?><br>
+        </p>
+      </div>
+    <?php endforeach; ?>
   </div>
+</div>
 
-<!-- terceiro carrosel -->
+<!-- CARROSSEL 3 -->
 <div class="carrosel-container3">
-    <h2>PRINCIPAIS NOVOS LANÇAMENTOS</h2>
-
-    <div class="botoes-navegacao3">
+  <h2>PRINCIPAIS NOVOS LANÇAMENTOS</h2>
+  <div class="botoes-navegacao3">
       <button class="botao-seta3" onclick="scrollCarousel3(-1)">&#x276E;</button>
       <button class="botao-seta3" onclick="scrollCarousel3(1)">&#x276F;</button>
     </div>
-
-    <div class="carrosel-imagens3" id="carrossel3">
+  <div class="carrosel-imagens3" id="carrossel3">
+    <?php foreach ($jogos_lancamentos as $jogo): ?>
       <div>
-        <img src="assets/img/man.jpg" alt="Imagem 1">
-        <p class= "texto-img2">Marvel's Spider-Man 2 <br> r$ 249,90<br> jogo base</p>
-        </div>
-      <div>
-       <img src="assets/img/the.avif" alt="Imagem 2">
-        <p class= "texto-img2">The Precinct <br> r$ 80,99 <br> jogo base</p>
-    </div>
-    <div>
-        <img src="assets/img/last.jpg" alt="Imagem 3">
-        <p class= "texto-img2">The Last of Us™ Parte II Remastered <br> r$ 199,00<br> jogo base</p>
-    </div>
-    <div>
-      <img src="assets/img/simulador.jpg" alt="Imagem 4">
-      <p class= "texto-img2">Farming simulator 25 <br> r$ 99,00 <br> jogo base</p>
-    </div>
-    <div>
-       <img src="assets/img/silent.avif" alt="Imagem 5">
-      <p class= "texto-img2">Silent hill 2 <br> r$ 150,00 <br> jogo base</p>
-    </div>
-    </div>
+        <a href="<?= base_url('jogo/' . $jogo->id_jogo) ?>">
+          <img src="<?= base_url($jogo->url) ?>" alt="<?= htmlspecialchars($jogo->titulo) ?>">
+        </a>
+        <p class="texto-img2">
+          <?= htmlspecialchars($jogo->titulo) ?><br>
+          R$ <?= number_format($jogo->preco, 2, ',', '.') ?><br>
+        </p>
+      </div>
+    <?php endforeach; ?>
   </div>
+</div>
 
-  <!-- quarto carrosel -->
+<!-- quarto carrosel -->
    <div class="carrosel-container4">
     <h2>CATEGORIAS</h2>
     <div class="botoes-navegacao4">
@@ -188,23 +153,23 @@
     </div>
 
     <div class="carrosel-imagens4" id="carrossel4">
-        <div class="img4">
+        <div class="img4c">
           <img src="assets/img/it.png" alt="Imagem 1">
           <p class= "texto-img4">casuais</p>
           </div>
-        <div class="img4">
+        <div class="img4c">
           <img src="assets/img/carro.webp" alt="Imagem 2">
           <p class= "texto-img4">corrida</p>
       </div>
-      <div class="img4">
+      <div class="img4c">
           <img src="assets/img/tenis.png" alt="Imagem 3">
           <p class= "texto-img4">esporte</p>
       </div>
-      <div class="img4">
+      <div class="img4c">
         <img src="assets/img/king.jpg" alt="Imagem 4">
         <p class= "texto-img4">casuais</p>
       </div>
-      <div class="img4">
+      <div class="img4c">
         <img src="assets/img/yoyo.avif" alt="Imagem 5">
         <p class= "texto-img4">jogos indie</p>
       </div>
@@ -224,20 +189,25 @@
             </h3>
         </div>
     </main>
-
+    <div class="wrap-menu">
     <footer class="menu-jogos">
         <ul>
-        <li class = "img1"><img src="assets/img/Bloodborne.jpg" alt="Bloodborne"></li>
-        <li class = "img2"><img src="assets/img/dark_souls.avif" alt="Dark Souls"></li>
-        <li class = "img3"><img src="assets/img/Fortnite.jpg" alt="Fortnite"></li>
-        <li class = "img44"><img src="assets/img/callofduty.avif" alt="Call of Duty"></li>
-        <li class = "img5"><img src="assets/img/batman.avif" alt="Batman"></li>
+            <?php foreach ($jogos_footer as $index => $jogo): ?>
+                <li class="img<?= $index + 1 ?>">
+                <a href="<?= base_url('jogo/' . $jogo->id_jogo) ?>">
+                    <img src="<?= base_url($jogo->url) ?>" alt="<?= htmlspecialchars($jogo->titulo) ?>">
+                </a>
+                </li>
+            <?php endforeach; ?>
         </ul>
-  </footer>
+    </footer>
+    </div>
+
 </div>
 <!-- FIM SOBRE NOS -->
 
 <!-- CONTAINER-ICONS -->
+<div class="carrosel-wrap">
 <div class="carrosel-container5">
     <div class="carrosel-imagens5">
         <div>
@@ -259,9 +229,10 @@
         </div>
     </div>
 </div>
-
+</div>
 
 <!-- VIDEO/LIVE -->
+<div class="video-wrap">
 <iframe width="800" height="450" 
   src="https://www.youtube.com/embed/cWBwFhUv1-8" 
   title="God of War Ragnarök Trailer" 
@@ -269,6 +240,7 @@
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
   allowfullscreen>
 </iframe>
+</div>
 
 <!-- CAIXINHA FEEDBACK -->
 <div class="feedback-container">

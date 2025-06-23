@@ -90,6 +90,7 @@ body {
 }
 
 .wrapProduto {
+
     padding-inline: 1dvw;
     padding-block: 1dvh;
     display: flex;
@@ -107,6 +108,7 @@ body {
     user-select: none;
 }
 .aumentarQnt, .diminuirQnt {
+    cursor: pointer;
     width: 30%;
     display: flex;
     align-items: center;
@@ -117,6 +119,13 @@ body {
     border-radius: 5px;
     border: 2px solid blueviolet;
     font-size: 16px;
+    transition: 0.5s;
+}
+
+.aumentarQnt:hover, .diminuirQnt:hover {
+    color: white;
+    background-color: blueviolet;
+    border: 2px solid black;
 }
 .imgLinhaProduto {
     width: 14rem;
@@ -129,6 +138,7 @@ body {
 }
 .infosProduto {
     padding-inline: 1dvw;
+    width: 20dvw;
     height: 12dvh;
     display: flex;
     justify-content: center;
@@ -137,6 +147,7 @@ body {
     text-align: left;
 }
 .tituloProduto {
+    width: 40%;
     font-size: 1.25rem;
 }
 .descProduto {
@@ -202,4 +213,22 @@ body {
     font-size: 1rem;
     border-radius: 5px;
     border: 2px solid blueviolet;
+}
+
+.botao-retorno {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background-color: black;
+    color: blueviolet;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: 2px solid blueviolet;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.botao-retorno:hover {
+    background-color: blueviolet;
+    color: white;
 }

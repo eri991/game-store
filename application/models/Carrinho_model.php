@@ -21,6 +21,9 @@ class Carrinho_model extends CI_Model {
             if ($novaQnt > 0) {
                 $this->db->where('id_item', $id_item);
                 $this->db->update('itens_carrinho', array('quantidade' => $novaQnt));
+            } else {
+                $this->db->where('id_item', $id_item);
+                $this->db->delete('itens_carrinho');
             }
         }
     }
