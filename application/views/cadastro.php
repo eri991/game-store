@@ -7,12 +7,20 @@
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/cadastroPage.css')?> ?v=<?= time() ?>">
 </head>
 <script type="text/javascript">
+	function anularNumeros(e){
+		const key = e.key;
+		if(key >= '0' && key <= '9'){
+			e.preventDefault();
+		};
+	}
 	function mostrar() {
 		checkbox = document.getElementById('checkboxMostrarSenha');
 		if(checkbox.checked){
 			document.getElementById('senha').type = 'text'
+			document.getElementById('confSenha').type = 'text'
 		} else {
 			document.getElementById('senha').type = 'password'
+			document.getElementById('confSenha').type = 'password'
 		}
 	}
 </script>
@@ -30,7 +38,7 @@
 		<section id="sideLogin">
 			<form action="" id="cadForm" autocomplete="off" method="post" onsubmit="return formValidation()">
 				<div class="inputContainer <?= form_error('nomeCompleto') ? 'input-error':'' ?>" >
-					<input type="text" name="nomeCompleto" id="nomeCompleto" name="nomeCompleto" class="inputsCad" placeholder=" " value="<?= set_value('nomeCompleto') ?>">
+					<input type="text" name="nomeCompleto" id="nomeCompleto"  class="inputsCad" onkeydown="anularNumeros(event)" placeholder=" " value="<?= set_value('nomeCompleto') ?>">
 					<label for="nomeCompleto">Nome Completo</label>
 					<?= form_error('nomeCompleto','<div class="erroMsg">','</div>');?>
 				</div>
@@ -278,9 +286,10 @@
 			</form>
 		</section>
 		<section id="sideSpaceBackground"
-			style="background-image: url(<?php echo base_url("assets/img/fundo_estelar.jpg") ?>);">
-			<img src='<?php echo base_url('assets/img/jinx.png') ?>' alt="Jinx">
-		gction>
+			style="background-image: 
+        radial-gradient(circle, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%),
+        url('<?php echo base_url("assets/img/fundo_jinx.png"); ?>');">
+		<section>
 	</main>
 </body>
 
